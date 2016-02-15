@@ -1,0 +1,8 @@
+$("#writer_coverage_button-#{id}").html("#{j render(:partial => 'areas/writer_coverage_button', :locals => {:area_id => id})}");
+$("#td_writer_coverage_#{id}").attr("data-value", "#{writer_coverage}");
+$("#td_writer_coverage_#{id}").parent('tr').attr("data-writer_coverage", "#{writer_coverage}");
+$("#writer_coverage_button-#{id}").effect("bounce",500);
+$("#area_status_#{id}").html("#{j render(:partial => 'areas/status_field', :locals => {:area_id => id})}");
+$("#area_burden_#{id}").html("#{j render(:partial => 'areas/burden_field', :locals => {:area_id => id})}");
+$("#area_status_#{id}").attr("data-value", "#{area.support_status}");
+$("#area_burden_#{id}").attr("data-value", "#{area.burden}");

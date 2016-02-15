@@ -1,0 +1,191 @@
+.col-md-9.col-md-offset-1
+  %h2 Docs Decomposer Manual
+
+  :markdown
+    ### What the Docs Decomposer Does
+  
+    This tool is meant to help writers and reviewers:
+  
+    - Flag, comment on, tag, and assign risk/priority to each page
+    - Review each page with the option to quickly reveal only: 
+      - Heading structure (h-tags)
+      - Code and command line examples/steps (pre/code elements)
+      - Procedures (ordered, unordered lists)
+      - Screenshots (images)
+    
+    It supports multiple users, each of which can leave comments or set
+    flags under their own identity. Users designated as an "admin" can set
+    the risk or priority of a page and also add/remove tags.
+
+    ### User Roles
+
+    The tool has two user roles:
+
+    * **Reviewers** can view pages, leave comments, and flag pages.
+    * **Technical writers** can view pages, leave comments, flag
+      pages, tag pages, and set the risk or priority on
+      pages. Writers are also able to own pages, which allows them to see a
+      list of pages they're responsible for on their user page. 
+    
+    ### Projects, Versions, and Pages
+
+    The tool thinks of the docs as a collection of projects, each of
+    which have several versions, under which there are many pages.
+
+    Projects could include "Puppet Enterprise," "Puppet," "Hiera," and
+    "Facter." 
+
+    <div class = "bs-callout bs-callout-warning">
+    <h4>TODO: App URLs are confusing</h4>
+    The app URLs are a little hard to read right now, and don't allow
+    users to simply plug in a version number or project name. It's
+    best to navigate with the breadcrumbs at the top of each page.
+    </div>
+
+
+    ### Priority
+     
+    It's not always possible to provide complete coverage in the
+    context of a release. Writers will sometimes need to choose
+    certain pages and content to either focus on or set aside. Writers
+    can set the priority of a given page to note how important it is
+    to the release.
+
+    * <span class="label label-danger">High Priority</span> means a page is a "must-have" for users.
+
+    * <span class="label label-warning">Medium Priority</span>  means a page is important and should be
+      ready for release on launch day.
+
+    * <span class="label label-success">Low Priority</span> means the page can probably go without close
+      scrutiny for a short period after release.
+
+    <div class = "bs-callout bs-callout-danger">
+    <h4>Setting Priority</h4>
+    Tech writers can set priority with the priority button on each
+    page. Reviewers are not currently able to set priority, but are
+    welcome to leave comments on a given page if they feel a page has
+    been misprioritized.</div>
+  :markdown
+
+    ### Risk
+    
+    "Risk" is an assessment of how risky content is for a user:
+
+    * <span class="label label-danger">High Risk</span> 
+      means that if the content is incorrect, there's a
+      significant chance the user will be unable to manage nodes via
+      Puppet Enterprise at all. Anything that affects communication
+      between master and agents is high risk.
+
+    * <span class="label label-warning">Medium Risk</span>
+      means that if content is incorrect, the user
+      will have a bad experience with the product and may end up
+      misconfiguring a node, or causing it to go unconfigured.
+
+    * <span class="label label-success">Low Risk</span>
+      means that if the content is incorrect, the user
+      will experience deprecation warnings or error messages that
+      allow them a chance to remediate the problem. Content that is
+      largely conceptual and doesn't provide specific actions is
+      also usually low risk. 
+
+    <div class = "bs-callout bs-callout-danger">
+    <h4>Setting Risk</h4>
+    Tech writers can set risk with the risk button on each
+    page, and on the index page for each version of a project.
+    Reviewers are not currently able to set risk, but are
+    welcome to leave comments on a given page if they feel a page has
+    been misprioritized.
+    </div>
+
+    
+    ### Flags
+
+    Every logged in user can set a flag on a given page. Flags don't
+    necessarily mean anything, though we'll eventually expose the
+    number of flags a page has as a way to get signal that a page
+    needs close attention.
+
+    You can flag a page by clicking its flag button:
+
+    <button class="btn btn-danger btn-sm">Flag This Page</button>
+
+    ### Tags
+
+    Technical writers can add tags to any given page by clicking the
+    `add` button:
+
+    <button class="btn btn-xs btn-link"><span class="glyphicon
+    glyphicon-plus-sign" />Add</button>
+
+    When adding tags to a page, use comma-delimited strings, like
+    this:
+
+    `aws, cloud, provisioning, deprecated`
+
+    To see every page with a given tag, click on the tag name in the
+    page tools. To remove a tag, click the delete button next to the tag name in
+    the page tools. 
+
+    <div class='btn-group'>
+    <a class='btn btn-default btn-xs'>
+              aws
+              &nbsp;
+              <a class="btn btn-default btn-xs"><span class='glyphicon glyphicon-remove-sign'></span></a>
+    </div>
+
+    <div class='btn-group'>
+    <a class='btn btn-default btn-xs'>
+              cloud
+              &nbsp;
+              <a class="btn btn-default btn-xs"><span class='glyphicon glyphicon-remove-sign'></span></a>
+    </div>
+
+    #### Tags and JIRA Tickets
+
+    You can annotate a page with a JIRA ticket by entering the ticket
+    number as a tag and prefixing it with "JIRA-". Any tag that
+    matches the pattern `JIRA-DOC-123`, `JIRA-SERVER-456`, etc. will
+    present on the page as a link to the JIRA ticket, not the
+    corresponding tag page.
+    
+    
+    <div class = "bs-callout bs-callout-danger">
+    <h4>Setting Tags</h4>
+    Reviewers are not currently able to add tags.</div>
+
+    ### Quick Review of Risky Elements
+
+    <button class="btn-primary btn btn-sm"><span class="glyphicon glyphicon-eye-close"></span></button>
+    <button class="btn-primary btn btn-sm"><span class="glyphicon glyphicon-eye-open"></span></button>
+
+    The page tools on each page provide a button that can hide or show
+    a collection of elements most likely to need closer review:
+
+    * Ordered lists
+    * pre/code blocks
+
+    Clicking the content toggle button will toggle these elements on
+    and off, removing paragraph text but leaving headings to provide
+    context. 
+        
+
+    ### Owning a Page
+    <button class="btn-primary btn btn-sm">Set Owner</span></button>
+
+    Technical writers can set the owner for a given page. Users can see all the
+    pages they own from their user pages. 
+
+    <div class = "bs-callout bs-callout-danger">
+    <h4>Page ownership</h4>
+    Only technical writers can own pages. 
+
+:markdown 
+  ### User Pages
+  Every registered user has a page. The user page is divided into tabs that may include:
+
+    * Pages owned by the user from active versions of the documentation (technical writers only).
+    * Pages flagged by the user
+    * Pages commented on by the user
+    * Pages owned by the user from inactive versions of the documentation (techical writers only).
+  

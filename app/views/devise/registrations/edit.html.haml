@@ -1,0 +1,59 @@
+%ol.breadcrumb
+  %li
+    %a{:href => root_path}
+      Home
+  %li
+    = link_to "Users", users_path
+  %li.inactive
+    = current_user.handle
+    
+.bg-danger.text-danger
+  = devise_error_messages! 
+
+%br
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :class => "form-horizontal"}) do |f|
+
+  .form-group
+    = f.label "Full name", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :fullname, :class => 'form-control'
+
+  .form-group
+    = f.label :email, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.email_field :email, autofocus: true , :class => 'form-control'
+
+  .form-group
+    = f.label "JIRA Name", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :jira_name, :class => 'form-control'
+      .help-block
+        %i
+          Provide your JIRA user name (e.g. jim.smith) to submit tickets from this tool.
+      
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation? 
+    %div
+      = "Currently waiting confirmation for: #{resource.unconfirmed_email}"
+
+  .form-group
+    = f.label 'New password', :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.password_field :password, autocomplete: "off" , :class => 'form-control'
+      .help-block
+        %i (leave blank if you don't want to change it)
+
+  .form-group
+    = f.label 'Confirm new password', :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control'
+
+  .form-group
+    = f.label :current_password , :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.password_field :current_password, autocomplete: "off", :class => 'form-control'
+      
+  .actions.col-sm-offset-2
+    .col-sm-4
+      = f.submit "Update", :class => 'btn btn-primary'
+
+

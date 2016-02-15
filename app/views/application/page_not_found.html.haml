@@ -1,0 +1,22 @@
+.col-md-8.col-md-offset-2
+  %p
+    .panel.panel-primary
+      .panel-heading
+        Missing URL
+      .panel-body
+        = url
+  %p
+    Unfortunately, we don't seem to have that page in our system. We're tracking
+    some versions of the following projects:
+
+  %ul
+    - Project.all.order(display_name: :desc).each do |p|
+      %li
+        = link_to p.display_name, project_path(p)
+
+  %p
+    If you're pretty sure that page should be in the system, or if you'd like us to
+    track other projects/versions, please 
+    %a{:href => "mailto:mike.hall@puppetlabs.com"}
+      drop a line to Mike Hall
+    and let him know what happened. Make sure to include the URL above.

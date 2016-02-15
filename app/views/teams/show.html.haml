@@ -1,0 +1,42 @@
+- tab_class = "active" 
+
+%ol.breadcrumb
+  %li
+    = link_to "Home", root_path
+  %li
+    = link_to "Teams", teams_path
+  %li.inactive
+    = @team.name
+
+%table.table.sortable
+  %thead 
+    %tr
+      %th
+        Risk
+      %th
+        Area
+      %th
+        Priority
+      %th
+        Coverage
+      %th
+        Required Support
+      %th
+        Effort
+      - if current_user.try(:super?)
+        %th
+          Manage
+        
+        
+  %tbody        
+    - @team.areas.each do |area|
+      = render :partial => "areas/index_row", :locals => {:area => area}
+            
+
+- if current_user.try(:super?)
+  = link_to "New Area", new_team_area_path(@team), :class => "btn btn-primary btn-xs"
+%br
+%br
+
+     
+  - #= render :partial => "pages/table_js.js.haml"

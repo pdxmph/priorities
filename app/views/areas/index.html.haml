@@ -1,0 +1,35 @@
+%ol.breadcrumb
+  %li
+    = link_to "Teams", teams_path
+  %li.active
+    = "#{@team.name} Priorities"
+
+%table.table.sortable
+  %thead 
+    %tr
+      %th
+        Risk
+      %th
+        Area
+      %th
+        Priority
+      %th
+        Coverage
+      %th
+        Required Support
+      %th
+        Effort
+      - if current_user.try(:super?) || current_user.try(:admin?)  && current_user.team_id == @team.id
+        %th
+          Manage
+        
+        
+  %tbody        
+    - areas.each do |area|
+      = render :partial => "areas/index_row", :locals => {:area => area}
+            
+
+- if current_user.try(:super?) || current_user.try(:admin?)  && current_user.team_id == @team.id
+  = link_to "New Area", new_team_area_path, :class => "btn btn-primary btn-xs"
+%br
+%br

@@ -1,0 +1,8 @@
+$("#support-button-#{id}").html("#{j render(:partial => 'areas/support_button', :locals => {:area_id => id})}");
+$("#td_support_#{id}").attr("data-value", "#{support}");
+$("#td_support_#{id}").parent('tr').attr("data-support", "#{support}");
+$("#support-button-#{id}").effect("bounce",500);
+$("#area_status_#{id}").html("#{j render(:partial => 'areas/status_field', :locals => {:area_id => id})}");
+$("#area_burden_#{id}").html("#{j render(:partial => 'areas/burden_field', :locals => {:area_id => id})}");
+$("#area_status_#{id}").attr("data-value", "#{area.support_status}");
+$("#area_burden_#{id}").attr("data-value", "#{area.burden}");

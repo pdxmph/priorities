@@ -1,0 +1,26 @@
+%ol.breadcrumb
+  %li
+    = link_to "Home", root_path
+
+%table.table.sortable
+  %thead 
+    %tr
+      %th
+        Name
+      %th
+        Email
+      %th
+        Team
+  %tbody        
+    - @users.each do |u|
+      %tr
+        %td
+          = link_to u do
+            = u.handle
+
+        %td
+          = u.email
+
+        %td
+          %i
+            team goes here

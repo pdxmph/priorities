@@ -1,0 +1,60 @@
+%ol.breadcrumb
+  %li
+    = link_to "Home", root_path
+  %li
+    = link_to "Priority Areas", team_areas_path
+  %li.active
+    = @area.name
+  - if current_user.try(:super?)
+    %li
+      = link_to edit_team_area_path(@area, :team_id => @area.team.id) do
+        Edit
+    
+%h2
+  = @area.name
+    
+- if @area.users.count > 0 
+  %p.text-muted
+    %span.glyphicon.glyphicon-user
+    != @area.users.collect {|user| link_to user.handle, user}.to_sentence
+  
+!= @area.rendered_description
+
+
+%hr
+
+%h3
+  = "Areas Similar to #{@area.name}"
+.col-md-3
+  %h4
+    != "#{display_label(@area.priority, 'Priority')}"
+  %ul.list-unstyled
+    - @area.team.areas.priority(@area.priority).each do |a|
+      %li
+        = link_to team_area_path(@area.id, :team_id => @area.team.id) do
+          = a.name
+        
+.col-md-3
+  %h4
+    != "#{display_label(@area.support_status, 'Risk')}"
+  %ul.list-unstyled
+    - @area.team.areas.status(@area.support_status).each do |a|
+      %li
+        = link_to team_area_path(@area.id, :team_id => @area.team.id) do
+          = a.name
+
+.col-md-3
+  %h4
+    != "#{burden_label(@area)}"
+  %ul.list-unstyled
+    - @area.team.areas.cost(@area.burden).each do |a|
+      %li
+        = link_to a.name, team_area_path(a.id, :team_id => a.team.id)
+       
+.col-md-3
+  %h4
+    != "#{display_label(@area.writer_coverage, 'Coverage')}"
+  %ul.list-unstyled
+    - @area.team.areas.cost(@area.burden).each do |a|
+      %li
+        = link_to a.name, team_area_path(a.id, :team_id => a.team.id)

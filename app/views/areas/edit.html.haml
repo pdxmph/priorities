@@ -1,0 +1,27 @@
+%h3.col-sm-offset-2
+  = "Edit #{@area.name}"
+
+%br
+= form_for(@area, url: team_area_path(:id => @area.id, :team_id => @area.team.id),:html => {:class => "form-horizontal"} ) do |f|
+  .form-group
+    = f.label :name, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :name, autofocus: true, :class => 'form-control'
+
+  -# .form-group
+  -#   = f.label "Associated Writers", :class => 'col-sm-2 control-label'
+  -#   .col-sm-4
+  -#     = f.collection_select :user_ids, User.admins.order(:fullname), :id, :fullname, {}, {multiple: true, :class => 'form-control', "style" => "height:175px;" } 
+
+      
+  .form-group
+    = f.label :description, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_area :description, :class => 'form-control', :rows => 20
+       
+  .actions.col-sm-offset-2
+    .col-sm-4
+      = f.submit "Save", :class => 'btn btn-primary'
+
+
+     

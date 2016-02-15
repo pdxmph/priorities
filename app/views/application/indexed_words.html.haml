@@ -1,0 +1,4 @@
+%ul
+- @tags.each do |t|
+  %li
+    = "#{t.name} -- #{t.taggings_count}"

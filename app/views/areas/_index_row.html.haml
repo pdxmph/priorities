@@ -1,0 +1,34 @@
+- area.support_status == 0 || area.burden == 0 ? row_data = "unknown" : row_data = "known"
+
+%tr{:id => "area_row_#{area.id}", "data-value" => row_data }
+
+  %td{:id => "area_status_#{area.id}", "data-value" => area.support_status }
+    = support_indicator(area)
+
+  %td{"data-value" => area.name, :id => "area_name_#{area.id}"}
+    = link_to area.name, team_area_path(:id => area.id, :team_id => area.team.id)
+       
+  %td{"data-value" => area.priority, :id => "td_priority_#{area.id}"}
+    %div{:id => "priority-button-#{area.id}"}
+      = render :partial => "areas/priority_button", :locals => {:area_id => area.id}
+           
+  %td{"data-value" => area.writer_coverage, :id => "td_writer_coverage_#{area.id}"}
+    %div{:id => "writer_coverage_button-#{area.id}"}
+      = render :partial => "areas/writer_coverage_button", :locals => {:area_id => area.id}
+
+  %td{"data-value" => area.support, :id => "td_support_#{area.id}"}
+    %div{:id => "support-button-#{area.id}"}
+      = render :partial => "areas/support_button", :locals => {:area_id => area.id}
+
+  %td{:id => "area_burden_#{area.id}", "data-value" => area.burden}
+    = burden_indicator(area)
+
+  
+  - if current_user.try(:super?) || current_user.try(:admin?) && current_user.team_id == area.team.id
+    %td{:id => "td_destroy_#{area.id}"}
+      = link_to edit_team_area_path(:id => area.id, :team_id => area.team.id), :class => "text-default" do
+        %span.glyphicon.glyphicon-pencil
+      &nbsp;
+      &nbsp;
+      = link_to team_area_path(:id => area.id, :team_id => area.team.id),  :method => :delete, :remote => true, :data =>  { confirm: "Really delete #{area.name}?" }, :class => "text-danger" do
+        %span.glyphicon.glyphicon-remove

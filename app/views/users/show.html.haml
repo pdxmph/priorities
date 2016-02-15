@@ -1,0 +1,71 @@
+- tab_class = "active" 
+
+%ol.breadcrumb
+  %li
+    = link_to "Home", root_path
+  %li
+    = link_to "Users", users_path
+  %li.inactive
+    = @user.handle
+
+  - if current_user && current_user.id == @user.id
+    %li
+      = link_to "Edit Account", edit_user_registration_path(@user)
+
+
+  
+    
+-# %ul{:role => "tablist", :class => "nav nav-tabs", :style => "margin-top:2em;"}
+
+-#   - if @user_pages.size > 0 
+-#     %li{:role => "presentation", :class => "active"}
+-#       %a{:href => "#user_pages", :role => "tab", "data-toggle" => "tab"}
+-#         Owned Pages
+-#   %li{:role => "presentation", :class => "#{tab_class}"}
+-#     %a{:href => "#flagged_pages", :role => "tab", "data-toggle" => "tab"}
+-#       Flagged Pages 
+-#   %li{:role => "presentation"}
+-#     %a{:href => "#commented_pages", :role => "tab", "data-toggle" => "tab"}
+-#       Commented Pages 
+-#   - if @inactive_user_pages.size > 0
+-#     %li{:role => "presentation"}
+-#       %a{:href => "#inactive", :role => "tab", "data-toggle" => "tab"}
+-#         Inactive Pages 
+-#   - if @user.areas.size > 0
+-#     %li{:role => "presentation"}
+-#       %a{:href => "#areas", :role => "tab", "data-toggle" => "tab"}
+-#         Documentation Areas
+      
+-# %div.tab-content
+-#   - if @user_pages.size > 0 
+-#     %div{:id => "user_pages", :role => "tabpanel", :class => "tab-pane active"}
+-#       = render :partial => "pages/pages_table", :locals => {:pages => @user_pages, :owner => "false"}
+        
+-#   %div{:id => "flagged_pages", :role => "tabpanel", :class => "tab-pane #{tab_class}"}
+-#     - if @voted_pages.size > 0 
+-#       = render :partial => "pages/pages_table", :locals => {:pages => @voted_pages}
+-#     - else
+-#       %div.text-primary.bg-info{:style => "padding:1em;margin:1em;"}
+-#         = "#{@user.handle} hasn't flagged any pages."
+
+-#   %div{:id => "commented_pages", :role => "tabpanel", :class => "tab-pane"}
+-#     - if @user.commented_pages.size > 0 
+-#       = render :partial => "pages/pages_table", :locals => {:pages => @commented_pages}
+-#     - else
+-#       %div.text-primary.bg-info{:style => "padding:1em;margin:1em;"}
+-#         = "#{@user.handle} hasn't commented on any pages."
+
+-#   - if @inactive_user_pages.size > 0
+-#     %div{:id => "inactive", :role => "tabpanel", :class => "tab-pane"}
+-#       = render :partial => "pages/pages_table", :locals => {:pages => @inactive_user_pages}
+
+-#   - if @user.areas.size > 0
+-#     %div{:id => "areas", :role => "tabpanel", :class => "tab-pane"}
+-#       %h4 Documentation Areas
+-#       %ul.list-unstyled
+-#         - @user.areas.each do |a|
+-#           %li
+-#             = link_to a.name, a
+
+      
+-# = render :partial => "pages/table_js.js.haml"
