@@ -13,13 +13,23 @@
     .col-sm-4
       = f.email_field :email, :class => 'form-control'
   .form-group
-    = f.label "JIRA Name", :class => 'col-sm-2 control-label'
+    = f.label "Manager", :class => 'col-sm-2 control-label'
     .col-sm-4
-      = f.text_field :jira_name, :class => 'form-control'
+      = f.check_box :admin, :class => 'form-control'
       .help-block
         %i
-          Provide your JIRA user name (e.g. jim.smith) to submit tickets from this tool.
+          Check this box if you're a manager. In this app, managers can create and manage teams but 
+          are otherwise harmless.
         
+  .form-group
+    = f.label "Team", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.select(:team_id, [["None", nil]] + Team.all.collect {|t| [t.name, t.id]}, {}, {:class => 'form-control'})
+      .help-block
+        %i
+          If you're a manager and your team doesn't exist yet, go ahead and sign up then create your team 
+          from the "Team" menu. Once you've created it, you'll be added to it automatically.
+          
   .form-group
     = f.label :password, :class => 'col-sm-2 control-label'
     .col-sm-4

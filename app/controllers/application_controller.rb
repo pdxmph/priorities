@@ -37,8 +37,8 @@ class ApplicationController < ActionController::Base
   
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up)  { |u| u.permit(:jira_name, :fullname, :email, :password, :password_confirmation) }
-    devise_parameter_sanitizer.for(:account_update)  { |u| u.permit(:jira_name, :fullname, :email, :password, :current_password, :password_confirmation) }
+    devise_parameter_sanitizer.for(:sign_up)  { |u| u.permit(:jira_name, :fullname, :email, :password, :password_confirmation, :admin, :team_id) }
+    devise_parameter_sanitizer.for(:account_update)  { |u| u.permit(:jira_name, :fullname, :email, :password, :current_password, :password_confirmation, :team_id) }
   end
   
 end
