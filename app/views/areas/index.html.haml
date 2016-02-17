@@ -19,7 +19,7 @@
         Required Support
       %th
         Effort
-      - if current_user.try(:super?) || current_user.try(:admin?)  && current_user.team_id == @team.id
+      - if current_user.try(:super?) or (current_user.try(:admin?)  && current_user.team_id == @team.id)
         %th
           Manage
         
@@ -29,7 +29,7 @@
       = render :partial => "areas/index_row", :locals => {:area => area}
             
 
-- if current_user.try(:super?) || current_user.try(:admin?)  && current_user.team_id == @team.id
+- if current_user.try(:super?) or (current_user.try(:admin?)  && current_user.team_id == @team.id)
   = link_to "New Area", new_team_area_path, :class => "btn btn-primary btn-xs"
 %br
 %br
