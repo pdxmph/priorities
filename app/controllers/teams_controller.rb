@@ -14,7 +14,19 @@ class TeamsController < ApplicationController
     @team = Team.new
   end
 
+  def scrum
+    @teams = Team.where(:scrum => true).order(name: :asc)
+    @title = "Scrum Teams"
+    render template: "teams/index"
+  end
 
+  def services
+    @teams = Team.where(:services => true).order(name: :asc)
+    @title = "Services Teams"
+    render template: "teams/index"
+  end
+  
+  
   def create
     @team = Team.new(:name => params[:team][:name],
                             :user_id => current_user.id

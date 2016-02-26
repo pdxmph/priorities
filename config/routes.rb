@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post 'areas/set_area_support' => 'areas#set_area_support'
   post 'areas/set_area_work' => 'areas#set_area_work'
   get '/users/' => 'users#index'
+  get '/teams/services' => 'teams#services'
+  get '/teams/scrum' => 'teams#scrum'
   match '/users/:id', :to => 'users#show', :as => :user,  :via => :get
 
   resources :teams do 

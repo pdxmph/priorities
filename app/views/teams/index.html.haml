@@ -7,14 +7,10 @@
     %tr
       %th
         Team
-      %th
-        Manager
   %tbody        
     - @teams.each do |t|
       %tr
         %td
           = link_to t.name, team_areas_path(t.id)
 
-        %td
-          = t.user.fullname
 
