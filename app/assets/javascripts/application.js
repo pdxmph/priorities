@@ -7,10 +7,22 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // compiled file.
 //
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
+//= require autocomplete-rails
+//= require jquery.md5
+//= require outerHTML-2.1.0
+//= require md5
+//= require jquery-ui
+//= require bootstrap-sortable
+//= require moment
+//= require jquery.filtertable.min.js
+//= require turbolinks
+
+
