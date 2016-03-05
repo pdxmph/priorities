@@ -1,0 +1,31 @@
+%h1 Listing goals
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Team
+      %th Priority
+      %th Support
+      %th Effort
+      %th
+      %th
+      %th
+
+  %tbody
+    - @goals.each do |goal|
+      %tr
+        %td= goal.name
+        %td= goal.description
+        %td= goal.team_id
+        %td= goal.priority
+        %td= goal.support
+        %td= goal.effort
+        %td= link_to 'Show', goal
+        %td= link_to 'Edit', edit_goal_path(goal)
+        %td= link_to 'Destroy', goal, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Goal', new_goal_path

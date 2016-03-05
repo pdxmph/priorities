@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @goal.name
+%p
+  %b Description:
+  = @goal.description
+%p
+  %b Team:
+  = @goal.team_id
+%p
+  %b Priority:
+  = @goal.priority
+%p
+  %b Support:
+  = @goal.support
+%p
+  %b Effort:
+  = @goal.effort
+
+= link_to 'Edit', edit_goal_path(@goal)
+\|
+= link_to 'Back', goals_path

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  team_id: 1
+  priority: 1
+  support: 1
+  effort: 1
+
+two:
+  name: MyString
+  description: MyText
+  team_id: 1
+  priority: 1
+  support: 1
+  effort: 1
