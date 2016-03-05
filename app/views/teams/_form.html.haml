@@ -1,22 +1,18 @@
-= form_for @team do |f|
-  - if @team.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@team.errors.count, "error")} prohibited this team from being saved:"
-      %ul
-        - @team.errors.full_messages.each do |msg|
-          %li= msg
+= simple_form_for @team, :html => { :class => 'form-horizontal' } do |f|
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :user_id
-    = f.number_field :user_id
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :rendered_description
-    = f.text_area :rendered_description
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.label :name, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :name, autofocus: true, :class => 'form-control'
+    = error_span(@team[:name])
+  .form-group
+    = f.label :description, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_area :description, :class => 'form-control', :style => "height:125px;"
+    = error_span(@team[:description])
+    = f.hidden_field :user_id, :value => current_user.id
+
+  .actions.col-sm-offset-2
+    .col-sm-4
+      = f.submit "Create", :class => 'btn btn-primary'
+      = link_to t('.cancel', :default => t("helpers.links.cancel")), teams_path, :class => 'btn btn-default'

@@ -1,18 +1,25 @@
-%p#notice= notice
+- model_class = Team
+.page-header
+  %h1
+    = @team.name
+  != @team.rendered_description
 
-%p
-  %b Name:
-  = @team.name
-%p
-  %b User:
-  = @team.user_id
-%p
-  %b Description:
-  = @team.description
-%p
-  %b Rendered description:
-  = @team.rendered_description
+%br
 
-= link_to 'Edit', edit_team_path(@team)
-\|
-= link_to 'Back', teams_path
+%table.table.sortable
+  %thead
+    %tr
+      %th Health
+      %th Goal
+      %th Priority
+      %th Support
+      %th Manage
+  %tbody
+    - @goals.each do |goal|
+      = render :partial => "goals/index_row", :locals => {:goal => goal}
+
+
+
+= link_to t('.back', :default => t("helpers.links.back")), teams_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(@team), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), team_path(@team), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

@@ -1,0 +1,28 @@
+- goal.health == 0 ? row_data = "unknown" : row_data = "known"
+
+%tr{:id => "goal_row_#{goal.id}", "data-value" => row_data }
+    
+  %td{:id => "goal_health_#{goal.id}", "data-value" => goal.health }
+    = health_indicator(goal)
+  
+  %td{"data-value" => goal.name, :id => "goal_name_#{goal.id}"}
+    = goal.name  
+
+  %td{"data-value" => goal.priority, :id => "td_priority_#{goal.id}"}
+    %div{:id => "priority-button-#{goal.id}"}
+      = render :partial => "goals/priority_button", :locals => {:goal => goal}
+           
+  %td{"data-value" => goal.support, :id => "td_goal_support_#{goal.id}"}
+    %div{:id => "support_button-#{goal.id}"}
+      = render :partial => "goals/support_button", :locals => {:goal => goal}
+
+  
+  - if current_user.try(:admin?) || goal.team.user_id == current_user.id 
+    %td{:id => "td_destroy_#{goal.id}"}
+      = link_to edit_goal_path(goal), :class => "text-default" do
+        %span.glyphicon.glyphicon-pencil
+      &nbsp;&nbsp;
+      = link_to goal_path(goal),  :method => :delete, :remote => true, :data =>  { confirm: "Really delete #{goal.name}?" }, :class => "text-danger" do
+        %span.glyphicon.glyphicon-remove
+
+

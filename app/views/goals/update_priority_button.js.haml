@@ -1,0 +1,5 @@
+$("#priority-button-#{id}").html("#{j render(:partial => 'goals/priority_button', :locals => {:goal => goal})}");
+$("#td_priority_#{id}").attr("data-value", "#{priority}");
+$("#td_priority_#{id}").parent('tr').attr("data-priority", "#{priority}");
+$("#goal_health_#{id}").html("#{j render(:partial => 'goals/health_field', :locals => {:goal => goal})}");
+$("#goal_health_#{id}").attr("data-value", "#{goal.health}");

@@ -45,12 +45,9 @@
                 - Team.all.each do |team|
                   %li
                     = link_to team.name, team
-                - if current_user.try(:admin?)
-                  %li{:role => "presentation", :class => "divider"}
-                  %li
-                    = link_to "Create New Team", new_team_path
-            %li
-              = link_to "Users", users_path
+                %li{:role => "presentation", :class => "divider"}
+                %li
+                  = link_to "Create New Team", new_team_path
 
             %li.dropdown
               %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}

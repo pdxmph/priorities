@@ -1,28 +1,30 @@
-= form_for @goal do |f|
+= form_for(@goal, :html => {:class => "form-horizontal"} ) do |f|
   - if @goal.errors.any?
     #error_explanation
       %h2= "#{pluralize(@goal.errors.count, "error")} prohibited this goal from being saved:"
       %ul
         - @goal.errors.full_messages.each do |msg|
           %li= msg
+  .row
+    .form-group
+      = f.label :name, :class => 'col-sm-2 control-label'
+      .col-sm-4
+        = f.text_field :name, autofocus: true, :class => 'form-control'
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :team_id
-    = f.number_field :team_id
-  .field
-    = f.label :priority
-    = f.number_field :priority
-  .field
-    = f.label :support
-    = f.number_field :support
-  .field
-    = f.label :effort
-    = f.number_field :effort
-  .actions
-    = f.submit 'Save'
+  .row
+    .form-group
+      = f.label :Organization, :class => 'col-sm-2 control-label'
+      .col-sm-4
+        = f.collection_select :organization_id, Organization.all, :id, :name, {}, {:class => 'form-control'}
+
+  .row
+    .form-group
+      = f.label :kind, :class => 'col-sm-2 control-label'
+      .col-sm-4
+        = f.select :kind, options_for_select(["Scrum Team Support", "Team Goal", "Organizational Goal", "Feature", "Company Goal", "Departmental Goal", "Initiative", "Current Work", "Future Work"],""),{:class => 'form-control'}
+
+
+  .row
+    %br    
+    .actions
+      = f.submit 'Save', :class => 'btn btn-primary'

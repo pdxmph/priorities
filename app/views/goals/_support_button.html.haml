@@ -1,0 +1,7 @@
+.btn-group.btn-group-xs
+  != goal_button(goal,"Support")
+  %ul.dropdown-menu{:role => "menu"}
+    - {"High" => 3, "Medium" => 2, "Low" => 1, "None" => 0}.each do |l,n|
+      %li
+        =link_to goals_set_goal_support_path(:goal => goal, :support => n), :remote => true, :method => :post do
+          = l
