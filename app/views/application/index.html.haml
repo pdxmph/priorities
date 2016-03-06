@@ -1,2 +1,7 @@
-%h1
-  Priorities
+- if user_signed_in? && current_user.lists.count > 0
+  = render 'lists/list_list', :@lists => current_user.lists
+
+- elsif user_signed_in?
+  = render 'lists/no_lists'
+- else
+  = render 'application/not_signed_in'

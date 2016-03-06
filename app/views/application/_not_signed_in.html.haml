@@ -1,0 +1,14 @@
+%div{:style => "margin-top:50px;"}
+  .col-sm-6.col-sm-offset-3
+    .panel.panel-primary
+      .panel-heading.panel-primary
+        %strong
+          You're not signed in. 
+      .panel-body
+        %p To use Priorities, you need to have a user account. 
+        
+        %a.btn.btn-success.btn-sm{:href => "/users/sign_in"}
+          Sign In
+        %a.btn.btn-sm.btn-default{:href =>  "/users/sign_up"}
+          Sign Up
+

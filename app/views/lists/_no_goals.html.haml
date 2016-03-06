@@ -1,0 +1,24 @@
+%div{:style => "margin-top:50px;"}
+  .col-sm-6.col-sm-offset-3
+    .panel.panel-primary
+      .panel-heading.panel-primary
+        %strong
+          This list doesn't have any goals. 
+      .panel-body
+        %p To use this list, you need to add goals. Goals can be things like:
+        
+        %ul.list-unstyled{:style => "margin-left:5em;margin-bottom:2em;"}
+          %li{:style => "padding-top:1em;"}
+            %span.glyphicon.glyphicon-road
+            A product feature on your roadmap.
+          %li{:style => "padding-top:1em;"}
+            %span.glyphicon.glyphicon-check
+            A recurring task you or your team has to do.
+          %li{:style => "padding-top:1em;"}
+            %span.glyphicon.glyphicon-flash
+            A development area you want to improve. 
+
+
+        %button.btn.btn-success.btn-sm{:id => 'goals_toggle', 'data-backdrop' => 'false', :style => "margin-left:6em;"}
+          %span.glyphicon.glyphicon-plus-sign
+          Add a Goal

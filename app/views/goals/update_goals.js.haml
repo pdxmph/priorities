@@ -1,3 +1,4 @@
 $('#goalModal').modal('toggle');
 $('#goalModal').find('form')[0].reset();
-$('#goals_table_body').html("#{j render(:partial => 'goals/goals_table_body', :locals => {:goals => @list.goals})}");
+$('#goals_area').html("#{j render(:partial => 'lists/goals_table', :locals => {:goals => goals})}");
+

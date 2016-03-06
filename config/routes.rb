@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  resources :lists
-  resources :goals
-  resources :teams
+
   devise_for :users
 
   get '/users/' => 'users#index'
@@ -12,5 +10,7 @@ Rails.application.routes.draw do
   post 'goals/set_goal_support' => 'goals#set_goal_support'
   post 'goals/set_goal_work' => 'goals#set_goal_work'
   root 'application#index'
-
+  resources :lists
+  resources :goals
+  
 end

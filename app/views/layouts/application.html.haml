@@ -43,7 +43,7 @@
                   Your Lists
                   %span.caret
                   %ul.dropdown-menu{:role => "menu"}
-                    - List.all.each do |list|
+                    - current_user.lists.each do |list|
                       %li
                         = link_to list.name, list
                     %li{:role => "presentation", :class => "divider"}
@@ -75,8 +75,8 @@
           %ul.nav.navbar-nav.navbar-right        
             - if user_signed_in? == false 
               %li
-                %p.navbar-btn
-                  %a.btn.btn-primary{:id => "signin_button", :href => new_user_session_path}
+                %span
+                  %a.btn.btn-primary.btn-xs.navbar-btn{:id => "signin_button", :href => new_user_session_path}
                     Sign In
             -else
               %li
@@ -87,9 +87,9 @@
               %li
                 &nbsp;
               %li
-                %p.navbar-btn
-                  %a.btn.btn-primary.btn-sm{:href => destroy_user_session_path, :id => "signout_button"}
-                    Sign Out
+                %div
+                  = link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'navbar-btn btn  btn-danger btn-xs'
+
 
   .container
     = bootstrap_flash

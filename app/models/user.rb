@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :teams
-  has_many :goals, through: :teams
+  has_many :lists
+  has_many :goals, through: :lists
 
   def full_name
     if self.first_name && self.last_name

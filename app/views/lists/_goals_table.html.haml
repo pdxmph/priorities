@@ -1,0 +1,17 @@
+- model_class = List
+
+%table.table.sortable
+  %thead
+    %tr
+      %th Health
+      %th Goal
+      %th Priority
+      %th Support
+      %th Manage
+  %tbody{:id => "goals_table_body"}
+    - goals.each do |goal|
+      = render :partial => "goals/index_row", :locals => {:goal => goal}
+
+%button.btn.btn-success.btn-sm.navbar-btn{:id => 'goals_toggle', 'data-backdrop' => 'false'}
+  %span.glyphicon.glyphicon-plus-sign
+  Add a Goal
