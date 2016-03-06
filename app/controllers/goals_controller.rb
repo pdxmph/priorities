@@ -92,10 +92,10 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
-    @team = @goal.team
+    @list = @goal.list
     respond_to do |format|
       if @goal.save
-        format.js {render :action => 'update_goals.js.haml', :object => @team, :locals => {:goals => @team.goals}}
+        format.js {render :action => 'update_goals.js.haml', :object => @list, :locals => {:goals => @list.goals}}
       else
         format.html { render :new }
         format.json { render json: @goal.errors, status: :unprocessable_entity }
@@ -120,9 +120,11 @@ class GoalsController < ApplicationController
   # DELETE /goals/1
   # DELETE /goals/1.json
   def destroy
+    @list = @goal.list
     @goal.destroy
     respond_to do |format|
-      format.html { redirect_to goals_url, notice: 'Goal was successfully destroyed.' }
+      format.js {render :action => 'refresh_goals_list.js.haml', :object => @list, :locals => {:goals => @list.goals}}
+#      format.html { redirect_to goals_url, notice: 'Goal was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -135,6 +137,6 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:name, :description, :team_id, :priority, :support, :effort)
+      params.require(:goal).permit(:name,:list_id, :description, :team_id, :priority, :support, :effort)
     end
 end

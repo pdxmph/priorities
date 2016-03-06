@@ -17,7 +17,7 @@
       = render :partial => "goals/support_button", :locals => {:goal => goal}
 
   
-  - if current_user.try(:admin?) || goal.team.user_id == current_user.id 
+  - if current_user.try(:admin?) || goal.list.user_id == current_user.id 
     %td{:id => "td_destroy_#{goal.id}"}
       = link_to edit_goal_path(goal), :class => "text-default" do
         %span.glyphicon.glyphicon-pencil

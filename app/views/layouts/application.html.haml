@@ -40,15 +40,15 @@
             - if current_user
               %li.dropdown
                 %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}
-                  Your Teams
+                  Your Lists
                   %span.caret
                   %ul.dropdown-menu{:role => "menu"}
-                    - Team.all.each do |team|
+                    - List.all.each do |list|
                       %li
-                        = link_to team.name, team
+                        = link_to list.name, list
                     %li{:role => "presentation", :class => "divider"}
                     %li
-                      = link_to "Create New Team", new_team_path
+                      = link_to "Create New List", new_list_path
 
             %li.dropdown
               %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}

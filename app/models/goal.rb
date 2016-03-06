@@ -1,6 +1,6 @@
 class Goal < ActiveRecord::Base
   belongs_to :team
-
+  belongs_to :list
   scope :priority, ->(priority) { where("priority = ?", priority) }
   scope :writer_coverage, ->(coverage) { where("writer_coverage = ?", coverage) }
   scope :low_risk, Proc.new { |area| area.support_status == 1 }
