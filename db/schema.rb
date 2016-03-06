@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225213513) do
+ActiveRecord::Schema.define(version: 20160229000330) do
 
   create_table "areas", force: :cascade do |t|
     t.string   "name"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20160225213513) do
     t.text     "rendered_content"
   end
 
+  create_table "support_levels", force: :cascade do |t|
+    t.integer  "scrum_id"
+    t.integer  "services_id"
+    t.integer  "level"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -72,8 +80,6 @@ ActiveRecord::Schema.define(version: 20160225213513) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean  "scrum"
-    t.boolean  "services"
   end
 
   create_table "users", force: :cascade do |t|

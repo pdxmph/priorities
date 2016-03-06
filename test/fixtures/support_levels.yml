@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scrum_id: 1
+  services_id: 1
+  level: 1
+
+two:
+  scrum_id: 1
+  services_id: 1
+  level: 1
