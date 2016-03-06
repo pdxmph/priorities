@@ -7,4 +7,13 @@ class User < ActiveRecord::Base
   has_many :teams
   has_many :goals, through: :teams
 
+  def full_name
+    if self.first_name && self.last_name
+      return "#{self.first_name} #{self.last_name}"
+    else
+      return email
+    end
+  end
+
+  
 end

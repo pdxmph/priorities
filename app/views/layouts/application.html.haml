@@ -37,17 +37,18 @@
           %a.navbar-brand{:href => "/"} Priorities
           %ul.nav.navbar-nav
 
-            %li.dropdown
-              %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}
-                Teams
-                %span.caret
-              %ul.dropdown-menu{:role => "menu"}
-                - Team.all.each do |team|
-                  %li
-                    = link_to team.name, team
-                %li{:role => "presentation", :class => "divider"}
-                %li
-                  = link_to "Create New Team", new_team_path
+            - if current_user
+              %li.dropdown
+                %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}
+                  Your Teams
+                  %span.caret
+                  %ul.dropdown-menu{:role => "menu"}
+                    - Team.all.each do |team|
+                      %li
+                        = link_to team.name, team
+                      %li{:role => "presentation", :class => "divider"}
+                      %li
+                        = link_to "Create New Team", new_team_path
 
             %li.dropdown
               %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}
@@ -81,7 +82,7 @@
               %li
                 %p.navbar-text
                   %span.glyphicon.glyphicon-user 
-                  = link_to current_user.first_name, current_user, :style => "color:white;"
+                  = link_to current_user.full_name, edit_user_registration_path(current_user), :style => "color:white;"
 
               %li
                 &nbsp;
