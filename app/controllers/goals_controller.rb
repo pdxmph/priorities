@@ -92,11 +92,10 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
-
+    @team = @goal.team
     respond_to do |format|
       if @goal.save
-        format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
-        format.json { render :show, status: :created, location: @goal }
+        format.js {render :action => 'update_goals.js.haml', :object => @team, :locals => {:goals => @team.goals}}
       else
         format.html { render :new }
         format.json { render json: @goal.errors, status: :unprocessable_entity }

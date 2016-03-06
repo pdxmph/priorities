@@ -1,21 +1,38 @@
 - model_class = Team
-.page-header
-  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
-%table.table.table-striped
-  %thead
-    %tr
-      %th= model_class.human_attribute_name(:name)
-      %th
-        Description
-      %th=t '.actions', :default => t("helpers.actions")
-  %tbody
-    - @teams.each do |team|
-      %tr
-        %td= link_to team.name, team_path(team)
-        %td
-          != team.rendered_description
-        %td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(team), :class => 'btn btn-default btn-xs'
-          = link_to t('.destroy', :default => t("helpers.links.destroy")), team_path(team), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
-= link_to t('.new', :default => t("helpers.links.new")), new_team_path, :class => 'btn btn-primary'
+
+- if @teams
+  .page-header
+    %h1
+      My Teams
+    %table.table
+      %thead
+        %tr
+          %th= model_class.human_attribute_name(:name)
+          %th
+            Description
+          %th=t '.actions', :default => t("helpers.actions")
+      %tbody
+        - @teams.each do |team|
+          %tr
+            %td= link_to team.name, team_path(team)
+            %td
+              != team.rendered_description
+            %td
+              = link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(team), :class => 'btn btn-default btn-xs'
+              = link_to t('.destroy', :default => t("helpers.links.destroy")), team_path(team), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
+  = link_to t('.new', :default => t("helpers.links.new")), new_team_path, :class => 'btn btn-primary'
+
+- else
+  %div{:style => "margin-top:150px;"}
+  .col-sm-6.col-sm-offset-3
+    .panel.panel-primary
+      .panel-heading.panel-primary
+        %strong
+          No teams to list. 
+      .panel-body
+        You're not signed in. 
+        %a{:id => "signin_button", :href => new_user_session_path}
+          Sign in or create an account.
+
