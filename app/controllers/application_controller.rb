@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     render :template => "application/index", :locals => {:hostname => @hostname}
   end
 
+  def docs
+    @title = "Documentation"
+    render :template => "application/docs"
+  end
+  
   
     protected
   def configure_permitted_parameters
