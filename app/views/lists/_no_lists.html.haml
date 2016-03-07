@@ -9,14 +9,14 @@
         
         %ul.list-unstyled{:style => "margin-left:5em;margin-bottom:2em;"}
           %li{:style => "padding-top:1em;"}
-            %span.glyphicon.glyphicon-check
-            Regular tasks you need to do.
-          %li{:style => "padding-top:1em;"}
             %span.glyphicon.glyphicon-user
             Teams you need to manage.
           %li{:style => "padding-top:1em;"}
             %span.glyphicon.glyphicon-list-alt
-            A project you're working on.
+            A project you're working on. 
+          %li{:style => "padding-top:1em;"}
+            %span.glyphicon.glyphicon-check
+            Groups of related work you need to prioritize. 
 
         = link_to new_list_path, :class => 'btn btn-success btn-sm', :style => "margin-left:6em;" do 
           %span.glyphicon.glyphicon-plus-sign
