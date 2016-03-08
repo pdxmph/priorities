@@ -6,9 +6,14 @@ class ApplicationController < ActionController::Base
 
   def index
     @title = "Home"
-    require 'socket'
-    @hostname = request.host_with_port
-    render :template => "application/index", :locals => {:hostname => @hostname}
+
+    if user_signed_in?
+      @lists = current_user.lists
+      @other_lists = current_user.other_lists
+    end
+
+    render :template => "application/index"
+
   end
 
   def docs

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160306031740) do
+ActiveRecord::Schema.define(version: 20160308040035) do
 
   create_table "goals", force: :cascade do |t|
     t.string   "name"
@@ -34,6 +34,20 @@ ActiveRecord::Schema.define(version: 20160306031740) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "lists_users", id: false, force: :cascade do |t|
+    t.integer "list_id"
+    t.integer "user_id"
+  end
+
+  add_index "lists_users", ["list_id", "user_id"], name: "lists_users_index", unique: true
+
+  create_table "posts_users", id: false, force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "user_id"
+  end
+
+  add_index "posts_users", ["post_id", "user_id"], name: "posts_users_index", unique: true
 
   create_table "teams", force: :cascade do |t|
     t.string   "name"

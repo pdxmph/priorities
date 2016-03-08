@@ -12,6 +12,12 @@
     = error_span(@list[:description])
     = f.hidden_field :user_id, :value => current_user.id
 
+  .form-group
+    = f.label "Share with ...", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.collection_select :user_ids, User.all, :id, :email, {}, {:multiple => true, :class => 'form-control', 'style' => 'height:250px;'} 
+    
+    
   .actions.col-sm-offset-2
     .col-sm-4
       = f.submit "Create", :class => 'btn btn-primary'
