@@ -95,7 +95,7 @@ class GoalsController < ApplicationController
     @list = @goal.list
     respond_to do |format|
       if @goal.save
-        format.js {render :action => 'update_goals.js.haml', :object => @list, :locals => {:goals => @list.goals}}
+        format.js {render :action => 'update_goals.js.haml', :locals => {:goals => @list.goals}}
       else
         format.html { render :new }
         format.json { render json: @goal.errors, status: :unprocessable_entity }

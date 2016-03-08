@@ -13,14 +13,9 @@
             = f.label :name
             = f.text_field :name, :autofocus => "autofocus", :id => "new_goal_name", :class => "form-control"
             = f.label :description
-            %br
             = f.text_area :description, :rows => 10, :id => "new_goal_description", :class => "form-control"
             = f.hidden_field :list_id, :value => @list.id
             %br
             = f.button :submit, "Create Goal", :html => {"data-dismiss" => "modal", "data-backdrop" => "false", "id" => "goalSubmit"}, :class => "btn btn-primary"
           %br
           %div.modal-footer
-
-
-%br
-%br

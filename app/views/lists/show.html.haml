@@ -11,23 +11,36 @@
   - else
     = render :partial => 'goals_table.html.haml', :locals => {:goals => @list.goals}
     
-= render :partial => 'goal_modal.html.haml'
+  
+%div.modal.fade{:id => "goalModal", :role => "dialog", 'data-backdrop' => 'false'}
+  %div.modal-dialog{:role => "document"}
+    %div.modal-content
+      %div.modal-header
+        %button.close{"data-dismiss" => "modal", :id => "goals_toggle"}
+          &times;
+        %h4.modal-title
+          %span.glyphicon.glyphicon-plus &nbsp;
+          Create a Goal
+      %div.modal-body
+        = simple_form_for @list.goals.new, :remote => true, html: { id: "goalForm"} do  |f|
+          = f.label :name
+          = f.text_field :name, :autofocus => "autofocus", :id => "new_goal_name", :class => "form-control"
+          = f.label :description
+          %br
+          = f.text_area :description, :rows => 10, :id => "new_goal_description", :class => "form-control"
+          = f.hidden_field :list_id, :value => @list.id
+          %br
+          = f.button :submit, "Create Goal", :html => {"data-dismiss" => "modal", "data-backdrop" => "false", "id" => "goalSubmit"}, :class => "btn btn-primary"
+      %div.modal-footer
+
+
+%br
+%br
 
 
 
 :javascript
 
-  
-  $(function() {
-    $('#goals_toggle').click(function()
-    {
-      $('#goalModal').modal('toggle');
-    }
-     );
-     
-     });
-
-
-  $(document).on('hidden.bs.modal', function (e) {
+  $(document).on('hide.bs.modal', function (e) {
     $(e.target).removeData('bs.modal');
   });
