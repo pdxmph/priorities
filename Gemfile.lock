@@ -227,7 +227,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
-  cancancan (~> 1.10)
+  cancancan
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails
