@@ -4,7 +4,7 @@
   %thead
     %tr
       %th Name
-      %th Kind
+      %th List
       %th
       %th
       %th
@@ -13,7 +13,7 @@
     - @goals.each do |goal|
       %tr
         %td= goal.name
-        %td= goal.kind
+        %td= goal.list.name
         %td= link_to 'Show', goal
         %td= link_to 'Edit', edit_goal_path(goal)
         %td= link_to 'Destroy', goal, :method => :delete, :data => { :confirm => 'Are you sure?' }

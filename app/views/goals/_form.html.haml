@@ -13,16 +13,15 @@
 
   .row
     .form-group
-      = f.label :Organization, :class => 'col-sm-2 control-label'
+      = f.label :Team, :class => 'col-sm-2 control-label'
       .col-sm-4
-        = f.collection_select :organization_id, Organization.all, :id, :name, {}, {:class => 'form-control'}
+        = f.collection_select :team_id, Team.all, :id, :name, {}, {:class => 'form-control'}
 
   .row
     .form-group
-      = f.label :kind, :class => 'col-sm-2 control-label'
+      = f.label :list, :class => 'col-sm-2 control-label'
       .col-sm-4
-        = f.select :kind, options_for_select(["Scrum Team Support", "Team Goal", "Organizational Goal", "Feature", "Company Goal", "Departmental Goal", "Initiative", "Current Work", "Future Work"],""),{:class => 'form-control'}
-
+        = f.collection_select :list_id, List.all, :id, :name, {}, {:class => 'form-control'}
 
   .row
     %br    
