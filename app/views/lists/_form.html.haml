@@ -15,7 +15,7 @@
   .form-group
     = f.label "Share with ...", :class => 'col-sm-2 control-label'
     .col-sm-4
-      = f.collection_select :user_ids, User.all, :id, :email, {}, {:multiple => true, :class => 'form-control', 'style' => 'height:250px;'} 
+      = f.collection_select :user_ids, User.all_except(current_user), :id, :full_name, {}, {:multiple => true, :class => 'form-control', 'style' => 'height:250px;'} 
     
     
   .actions.col-sm-offset-2

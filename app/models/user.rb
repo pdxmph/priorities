@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  scope :all_except, ->(user) { where.not(id: user) }
+
   
   def other_lists
     other_lists = List.includes(:users).where('users.id' => self.id).where.not('user_id' =>  self.id)

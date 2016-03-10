@@ -5,12 +5,14 @@
       %th Goal
       %th Priority
       %th Support
-      %th Manage
+      - if can? :manage, @list
+        %th Manage
   %tbody{:id => "goals_table_body"}
     - goals.each do |goal|
       = render :partial => "goals/index_row", :locals => {:goal => goal}
 
-%a.btn.btn-success.btn-sm{:id => 'add_goals_toggle', 'data-toggle' => 'modal', 'data-target' => "#goalModal"}
-  %span.glyphicon.glyphicon-plus-sign
-  Add a Goal
+- if can? :manage, @list
+  %a.btn.btn-success.btn-sm{:id => 'add_goals_toggle', 'data-toggle' => 'modal', 'data-target' => "#goalModal"}
+    %span.glyphicon.glyphicon-plus-sign
+    Add a Goal
   

@@ -4,22 +4,10 @@
   %li.active
     = @list.name
 
-- if can? :read, @list
-  %p
-    You can read this
-- else
-  %p
-    You can't read this
-
-- if can? :manage, @list
-  %p 
-    You can manage this.
-- else
-  %p 
-    You can't manage this.
-
 %div{:id => "goals_area"}
-  - if @list.goals.count < 1
+  - if cannot? :read, @list
+    = render :partial => 'no_authorization.html.haml'
+  - elsif @list.goals.count < 1 and can? :manage, @list
     = render :partial => 'no_goals.html.haml'
   - else
     = render :partial => 'goals_table.html.haml', :locals => {:goals => @list.goals}
