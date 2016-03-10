@@ -11,6 +11,7 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    
     @goals = @list.goals
   end
 

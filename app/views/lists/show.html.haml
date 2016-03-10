@@ -4,12 +4,19 @@
   %li.active
     = @list.name
 
-- if current_user.can? :read, @list
-  %h1
-    YES YOU CAN
+- if can? :read, @list
+  %p
+    You can read this
 - else
-  %h2
-    NO YOU CAN'T
+  %p
+    You can't read this
+
+- if can? :manage, @list
+  %p 
+    You can manage this.
+- else
+  %p 
+    You can't manage this.
 
 %div{:id => "goals_area"}
   - if @list.goals.count < 1

@@ -10,11 +10,11 @@
 
   %td{"data-value" => goal.priority, :id => "td_priority_#{goal.id}"}
     %div{:id => "priority-button-#{goal.id}"}
-      = render :partial => "goals/priority_button", :locals => {:goal => goal}
+      = render :partial => "goals/priority_button", :locals => {:goal => goal, :list => @list}
            
   %td{"data-value" => goal.support, :id => "td_goal_support_#{goal.id}"}
     %div{:id => "support_button-#{goal.id}"}
-      = render :partial => "goals/support_button", :locals => {:goal => goal}
+      = render :partial => "goals/support_button", :locals => {:goal => goal, :list => @list}
 
   
   - if current_user.try(:admin?) || goal.list.user_id == current_user.id 

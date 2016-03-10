@@ -12,7 +12,8 @@ class GoalsController < ApplicationController
         format.js { render :action => 'update_priority_button.js.haml',
                            :locals => {:id => @goal.id,
                                        :priority => @goal.priority,
-                                       :goal => @goal}}
+                                       :goal => @goal,
+                                       :list => @goal.list}}
         format.html 
       end
     end
@@ -28,7 +29,8 @@ class GoalsController < ApplicationController
         format.js { render :action => 'update_support_button.js.haml',
                            :locals => {:id => @goal.id,
                                        :support => @goal.support,
-                                       :goal => @goal}}
+                                       :goal => @goal,
+                                       :list => @goal.list}}
         format.html 
       end
     end

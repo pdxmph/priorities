@@ -1,4 +1,4 @@
-$("#support_button-#{id}").html("#{j render(:partial => 'goals/support_button', :locals => {:goal => goal})}");
+$("#support_button-#{id}").html("#{j render(:partial => 'goals/support_button', :locals => {:goal => goal, :list => list})}");
 $("#td_support_#{id}").attr("data-value", "#{support}");
 $("#td_support_#{id}").parent('tr').attr("data-support", "#{support}");
 $("#goal_health_#{id}").html("#{j render(:partial => 'goals/health_field', :locals => {:goal => goal})}");
