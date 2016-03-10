@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   get '/lists' => 'application#index'
+  get '/goals' => 'application#index'
   get '/docs' => 'application#docs'
   match '/users/:id', :to => 'users#show', :as => :user,  :via => :get
   post 'goals/set_goal_priority' => 'goals#set_goal_priority'

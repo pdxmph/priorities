@@ -8,6 +8,11 @@ class Ability
     can :read, List do |list|
       list.user_ids.include?(user.id)
     end
+
+    can :manage, Goal do |goal|
+      goal.list.user_id == user.id
+    end
+    
   end
 
 

@@ -1,30 +1,21 @@
-= form_for(@goal, :html => {:class => "form-horizontal"} ) do |f|
-  - if @goal.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@goal.errors.count, "error")} prohibited this goal from being saved:"
-      %ul
-        - @goal.errors.full_messages.each do |msg|
-          %li= msg
-  .row
+- if can? :manage, @goal
+  = simple_form_for @goal, :html => { :class => 'form-horizontal' } do |f|
+
     .form-group
       = f.label :name, :class => 'col-sm-2 control-label'
       .col-sm-4
         = f.text_field :name, autofocus: true, :class => 'form-control'
-
-  .row
+        = error_span(@goal[:name])
     .form-group
-      = f.label :Organization, :class => 'col-sm-2 control-label'
+      = f.label :description, :class => 'col-sm-2 control-label'
       .col-sm-4
-        = f.collection_select :organization_id, Organization.all, :id, :name, {}, {:class => 'form-control'}
+        = f.text_area :description, :class => 'form-control', :style => "height:125px;"
+        = error_span(@goal[:description])
+    = f.hidden_field :user_id, :value => current_user.id
 
-  .row
-    .form-group
-      = f.label :kind, :class => 'col-sm-2 control-label'
+   
+    .actions.col-sm-offset-2
       .col-sm-4
-        = f.select :kind, options_for_select(["Scrum Team Support", "Team Goal", "Organizational Goal", "Feature", "Company Goal", "Departmental Goal", "Initiative", "Current Work", "Future Work"],""),{:class => 'form-control'}
+        = f.submit "Save", :class => 'btn btn-primary'
+        = link_to t('.cancel', :default => t("helpers.links.cancel")), lists_path, :class => 'btn btn-default'
 
-
-  .row
-    %br    
-    .actions
-      = f.submit 'Save', :class => 'btn btn-primary'
