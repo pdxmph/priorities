@@ -52,7 +52,54 @@ module GoalsHelper
   end
 
 
+  def burden_label(goal)
+    case goal.burden
+    when 0
+      label_class = "default"
+      label = "No"
+      glyph = "question-sign"
+    when 1..2
+      label_class = "success"
+      label = "Low"
+      glyph = "ok-sign"
+    when 3..4
+      label_class = "warning"
+      label = "Medium"
+      glyph = "warning-sign"
+    when 5..6
+      label_class = "danger"
+      label = "High"
+      glyph = "exclamation-sign"
+    end
+    capture_haml do
+      haml_tag :span, class: "label-#{label_class} label" do
+        haml_tag :span, class: "glyphicon glyphicon-#{glyph}"
+        haml_concat "#{label} Cost"
+      end
+    end
 
+
+
+  end
+
+  def burden_indicator(goal)
+    case goal.burden
+    when 0
+      indicator_class = "muted"
+    when 1..2
+      indicator_class = "success"
+    when 3..4
+      indicator_class = "warning"
+    when 5..6
+      indicator_class = "danger"
+    end
+    
+    capture_haml do
+      haml_tag :span, class: "label label-#{indicator_class}"
+    end    
+    
+  end
+  
 
   def goal_button_properties(goal,prop,list)
     case prop
@@ -60,6 +107,8 @@ module GoalsHelper
       goal_prop = goal.support
     when "Priority"
       goal_prop = goal.priority
+    when "Effort"
+      goal_prop = goal.effort
     end
     
     case goal_prop
@@ -93,5 +142,9 @@ module GoalsHelper
     end
     return [btn_class, word]
   end
+
+
+
+
 end
 

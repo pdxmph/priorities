@@ -1,0 +1,5 @@
+$("#effort_button-#{id}").html("#{j render(:partial => 'goals/effort_button', :locals => {:goal => goal, :list => list})}");
+$("#td_effort_#{id}").attr("data-value", "#{effort}");
+$("#td_effort_#{id}").parent('tr').attr("data-effort", "#{effort}");
+$("#td_goal_burden_#{id}").html("#{j render(:partial => 'goals/burden_field', :locals => {:goal => goal, :list => list})}");
+$("#td_goal_burden_#{id}").attr("data-value", "#{goal.burden}");

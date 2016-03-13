@@ -3,3 +3,5 @@ $("#td_support_#{id}").attr("data-value", "#{support}");
 $("#td_support_#{id}").parent('tr').attr("data-support", "#{support}");
 $("#goal_health_#{id}").html("#{j render(:partial => 'goals/health_field', :locals => {:goal => goal})}");
 $("#goal_health_#{id}").attr("data-value", "#{goal.health}");
+$("#td_goal_burden_#{id}").html("#{j render(:partial => 'goals/burden_field', :locals => {:goal => goal, :list => list})}");
+$("#td_goal_burden_#{id}").attr("data-value", "#{goal.burden}");

@@ -16,6 +16,12 @@
     %div{:id => "support_button-#{goal.id}"}
       = render :partial => "goals/support_button", :locals => {:goal => goal, :list => @list}
 
+  %td{"data-value" => goal.effort, :id => "td_goal_effort_#{goal.id}"}
+    %div{:id => "effort_button-#{goal.id}"}
+      = render :partial => "goals/effort_button", :locals => {:goal => goal, :list => @list}
+    
+  %td{"data-value" => goal.burden, :id => "td_goal_burden_#{goal.id}"}
+    = render :partial => "goals/burden_field", :locals => {:goal => goal}
   
   - if can? :manage, @list
     %td{:id => "td_destroy_#{goal.id}"}

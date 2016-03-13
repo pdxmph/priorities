@@ -1,0 +1,15 @@
+.btn-group.btn-group-xs
+
+  - properties = goal_button_properties(goal, "Effort", list)
+
+  %button{:type => "button", "data-toggle" => "dropdown", :class => "dropdown-toggle btn-xs btn btn-#{properties[0]}"}
+    = properties[1]
+    = "Effort"
+    - if can? :manage, list
+      %span.caret
+  - if can? :manage, list
+    %ul.dropdown-menu{:role => "menu"}
+      - {"High" => 3, "Medium" => 2, "Low" => 1, "None" => 0}.each do |l,n|
+        %li
+          =link_to goals_set_goal_effort_path(:goal => goal, :effort => n), :remote => true, :method => :post do
+            = l

@@ -3,3 +3,5 @@ $("#td_priority_#{id}").attr("data-value", "#{priority}");
 $("#td_priority_#{id}").parent('tr').attr("data-priority", "#{priority}");
 $("#goal_health_#{id}").html("#{j render(:partial => 'goals/health_field', :locals => {:goal => goal})}");
 $("#goal_health_#{id}").attr("data-value", "#{goal.health}");
+$("#td_goal_burden_#{id}").html("#{j render(:partial => 'goals/burden_field', :locals => {:goal => goal, :list => list})}");
+$("#td_goal_burden_#{id}").attr("data-value", "#{goal.burden}");

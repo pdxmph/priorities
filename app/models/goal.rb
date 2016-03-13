@@ -17,8 +17,17 @@ class Goal < ActiveRecord::Base
   end
     
   def self.cost(cost)
-    areas = Area.select { |a| a.burden == cost }
-    return areas
+    goals = Goal.select { |g| g.burden == cost }
+    return goals
+  end
+
+
+  def burden
+    if self.support == nil or self.effort == nil or  self.support == 0 or self.effort == 0 
+      0
+    else
+      self.support + self.effort
+    end
   end
   
   def health
@@ -60,6 +69,5 @@ class Goal < ActiveRecord::Base
       "at High Risk"
     end
   end
-
   
 end

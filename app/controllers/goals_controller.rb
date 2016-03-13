@@ -19,6 +19,7 @@ class GoalsController < ApplicationController
     end
   end
 
+ 
   def set_goal_support
     @support = params[:support]
     @goal = Goal.find(params[:goal])
@@ -36,37 +37,22 @@ class GoalsController < ApplicationController
     end
   end
 
- def set_goal_frequency
-    @frequency = params[:frequency]
-    @goal = params[:goal]
-    @goal.frequency = @frequency
+ def set_goal_effort
+    @effort = params[:effort]
+    @goal = Goal.find(params[:goal])
+    @goal.effort = @effort
 
     if @goal.save
       respond_to do |format|
-        format.js { render :action => 'update_frequency_button.js.haml',
-                           :locals => {:id => params[:goal_id],
-                                       :frequency => @goal.frequency,
-                                       :goal => @goal}}
+        format.js { render :action => 'update_effort_button.js.haml',
+                           :locals => {:id => @goal.id,
+                                       :effort => @goal.effort,
+                                       :goal => @goal,
+                                       :list => @goal.list}}
         format.html 
       end
     end
  end
-
-  def set_writer_coverage
-    @writer_coverage = params[:writer_coverage]
-    @goal = params[:goal]
-    @goal.writer_coverage = @writer_coverage
-
-    if @goal.save
-      respond_to do |format|
-        format.js { render :action => 'update_writer_coverage_button.js.haml',
-                           :locals => {:id => params[:goal_id],
-                                       :writer_coverage => @goal.writer_coverage,
-                                       :goal => @goal}}
-        format.html 
-      end
-    end
-  end
 
 
   
