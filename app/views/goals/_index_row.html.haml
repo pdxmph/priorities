@@ -6,7 +6,7 @@
     = health_indicator(goal)
   
   %td{"data-value" => goal.name, :id => "goal_name_#{goal.id}"}
-    = goal.name  
+    = link_to goal.name, goal
 
   %td{"data-value" => goal.priority, :id => "td_priority_#{goal.id}"}
     %div{:id => "priority-button-#{goal.id}"}

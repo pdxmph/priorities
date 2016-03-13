@@ -1,7 +1,5 @@
-%h1 Editing goal
+%h1
+  = "Editing #{@goal.name}"
 
 = render 'form'
 
-= link_to 'Show', @goal
-\|
-= link_to 'Back', goals_path

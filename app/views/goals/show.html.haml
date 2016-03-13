@@ -1,12 +1,58 @@
 %p#notice= notice
 
-%p
-  %b Name:
+%ol.breadcrumb
+  %li
+    = link_to "Home", root_path
+  %li
+    = link_to @goal.list.name, @goal.list
+  %li.active
+    = @goal.name
+  - if can? :manage, @goal 
+    %li
+      = link_to edit_goal_path(@goal) do
+        Edit
+    
+%h2
   = @goal.name
-%p
-  %b Kind:
-  = @goal.kind
 
-= link_to 'Edit', edit_goal_path(@goal)
-\|
-= link_to 'Back', goals_path
+-# some day users may come back
+-# - if @area.users.count > 0 
+-#   %p.text-muted
+-#     %span.glyphicon.glyphicon-user
+-#     != @area.users.collect {|user| link_to user.handle, user}.to_sentence
+  
+!= @goal.rendered_description
+
+
+%hr
+
+%h3
+  = "Goals Similar to #{@goal.name}"
+.col-md-3
+  %h4
+    != "#{display_label(@goal.priority, 'Priority')}"
+  %ul.list-unstyled
+    - @goal.list.goals.priority(@goal.priority).each do |a|
+      %li
+        = link_to a.name, a
+    
+.col-md-3
+  %h4
+    != "#{display_label(@goal.health, 'Health')}"
+  %ul.list-unstyled
+    - Goal.health(@goal.health, @goal.list).each do |a|
+      %li
+        = link_to a.name, a
+-# some day burden may come back
+-# .col-md-3
+-#   %h4
+-#     != "#{burden_label(@area)}"
+-#   %ul.list-unstyled
+-#     - Area.cost(@area.burden).each do |a|
+-#       %li
+-#         = link_to a.name, a
+
+-# .col-md-3
+-#   %h4
+-#     != "#{display_label(@area.writer_coverage, 'Coverage')}"
+-#   %ul.list-unstyled
