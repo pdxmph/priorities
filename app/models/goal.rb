@@ -3,12 +3,14 @@ class Goal < ActiveRecord::Base
   belongs_to :team
   belongs_to :list
 
-  scope :priority, ->(priority) { where("priority = ?", priority) }
-  scope :writer_coverage, ->(coverage) { where("writer_coverage = ?", coverage) }
+  scope :priority, ->(priority,list) { where("priority = ? AND list_id = ?", priority, list.id) }
+  scope :effort, ->(effort,list) { where("effort = ? AND list_id != ?", effort, list.id) }
   scope :low_risk, Proc.new { |area| area.support_status == 1 }
   scope :medium_risk, Proc.new { |area| area.support_status == 2 }
   scope :high_risk, Proc.new { |area| area.support_status == 3 }
   scope :unknown_risk, Proc.new { |area| area.support_status == 0 }
+  scope :all_except, ->(goal) { where.not(id: goal) }
+
   markdownize! :description
   
   def self.health(health, list)
@@ -16,8 +18,8 @@ class Goal < ActiveRecord::Base
     return goals
   end
     
-  def self.cost(cost)
-    goals = Goal.select { |g| g.burden == cost }
+  def self.cost(cost, list)
+    goals = Goal.select { |g| g.burden == cost && g.list_id = list.id }
     return goals
   end
 

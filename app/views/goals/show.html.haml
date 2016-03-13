@@ -32,7 +32,7 @@
   %h4
     != "#{display_label(@goal.priority, 'Priority')}"
   %ul.list-unstyled
-    - @goal.list.goals.priority(@goal.priority).each do |a|
+    - Goal.all_except(@goal).priority(@goal.priority, @goal.list).each do |a|
       %li
         = link_to a.name, a
     
@@ -40,19 +40,22 @@
   %h4
     != "#{display_label(@goal.health, 'Health')}"
   %ul.list-unstyled
-    - Goal.health(@goal.health, @goal.list).each do |a|
+    - Goal.all_except(@goal).health(@goal.health, @goal.list).each do |a|
       %li
         = link_to a.name, a
--# some day burden may come back
--# .col-md-3
--#   %h4
--#     != "#{burden_label(@area)}"
--#   %ul.list-unstyled
--#     - Area.cost(@area.burden).each do |a|
--#       %li
--#         = link_to a.name, a
 
--# .col-md-3
--#   %h4
--#     != "#{display_label(@area.writer_coverage, 'Coverage')}"
--#   %ul.list-unstyled
+.col-md-3
+  %h4
+    != "#{burden_label(@goal)}"
+  %ul.list-unstyled
+    - Goal.all_except(@goal).cost(@goal.burden, @goal.list).each do |g|
+      %li
+        = link_to g.name, g
+
+.col-md-3
+  %h4
+    != "#{display_label(@goal.effort, 'Effort')}"
+  %ul.list-unstyled
+    - Goal.all_except(@goal).effort(@goal.effort, @goal.list).each do |a|
+      %li
+        = link_to a.name, a

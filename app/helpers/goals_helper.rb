@@ -6,22 +6,24 @@ module GoalsHelper
       label_class = "default"
       label = "No"
     when 1
-      if property == "Coverage"
-        label_class = "danger"
+      if property == "Health"
+        label_class = "success"
+        label = "Good"
       else
         label_class = "success"
+        label = "Low"
       end
-      label = "Low"
     when 2
       label_class = "warning"
       label = "Medium"
     when 3
-      if property == "Coverage"
-        label_class = "success"
-      else
+      if property == "Effort" or property == "Priority"
         label_class = "danger"
+        label = "High"
+      elsif property == "Health"
+        label_class = "danger"
+        label = "Poor"
       end
-      label = "High"
     end
 
     capture_haml do
@@ -113,8 +115,13 @@ module GoalsHelper
     
     case goal_prop
     when 0
-      word = "No"
-      btn_class = "danger"
+      if prop == "Effort"
+        word = "No"
+        btn_class = "default"
+      else
+        word = "No"
+        btn_class = "danger"
+      end
     when 1
       word = "Low"
       if prop == "Support"
