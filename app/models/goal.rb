@@ -1,17 +1,19 @@
 class Goal < ActiveRecord::Base
+
   belongs_to :team
   belongs_to :list
+
   scope :priority, ->(priority) { where("priority = ?", priority) }
   scope :writer_coverage, ->(coverage) { where("writer_coverage = ?", coverage) }
   scope :low_risk, Proc.new { |area| area.support_status == 1 }
   scope :medium_risk, Proc.new { |area| area.support_status == 2 }
   scope :high_risk, Proc.new { |area| area.support_status == 3 }
   scope :unknown_risk, Proc.new { |area| area.support_status == 0 }
-
+  markdownize! :description
   
-  def self.status(status)
-    areas = Area.select { |a| a.support_status == status}
-    return areas
+  def self.health(health, list)
+    goals = list.goals.select { |g| g.health == health}
+    return goals
   end
     
   def self.cost(cost)
