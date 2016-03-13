@@ -8,7 +8,7 @@
       %th
         Description
       %th
-        Status
+        Goals Status
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @lists.each do |list|
@@ -35,6 +35,7 @@
         %th
           Description
         %th
+          Goals Status
         %th
     %tbody
       - @other_lists.each do |list|
@@ -43,7 +44,7 @@
           %td
             != list.rendered_description
           %td
-         
+            = render :partial => "lists/status_board", :locals => {:list => list}
 
 
 

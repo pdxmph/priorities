@@ -1,7 +1,7 @@
-- if user_signed_in? && current_user.lists.count > 0
+- if user_signed_in? && current_user.lists.count > 0 
   = render 'lists/list_list' 
-
-
+- elsif user_signed_in? && current_user.other_lists.count > 0
+  = render 'lists/list_list' 
 - elsif user_signed_in?
   = render 'lists/no_lists'
 - else
