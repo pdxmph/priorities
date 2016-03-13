@@ -7,6 +7,8 @@
         List
       %th
         Description
+      %th
+        Status
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @lists.each do |list|
@@ -14,6 +16,9 @@
         %td= link_to list.name, list_path(list)
         %td
           != list.rendered_description
+        %td
+          = render :partial => "lists/status_board", :locals => {:list => list}
+
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_list_path(list), :class => 'btn btn-default btn-xs'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), list_path(list), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'

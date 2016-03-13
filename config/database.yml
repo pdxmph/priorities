@@ -13,7 +13,7 @@ development:
   encoding: unicode
   database: priorities_development
   pool: 5
-  username: 
+  username: mike
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
