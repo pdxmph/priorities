@@ -19,7 +19,7 @@ class Goal < ActiveRecord::Base
   end
     
   def self.cost(cost, list)
-    goals = Goal.select { |g| g.burden == cost && g.list_id = list.id }
+    goals = list.goals.select { |g| g.burden == cost}
     return goals
   end
 
