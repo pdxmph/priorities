@@ -12,11 +12,15 @@ require 'csv'
 # Use the email address of the user who will own the imported lists
 user_email = "mike.hall@puppetlabs.com"
 
+# import file name. This file needs to be in the "scripts" directory
+file_name = ""
+
+
 # Nothing user-serviceable below here unless you want to reassign the columns the script gets import data from
 
 user = User.find_by_email(user_email)
 
-csv = File.join(File.dirname(__FILE__), "2017_eng_initiatives.csv")
+csv = File.join(File.dirname(__FILE__), file_name)
 csv_text = File.read(csv)
 csv = CSV.parse(csv_text)
 puts csv.count
