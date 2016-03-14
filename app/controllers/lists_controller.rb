@@ -1,13 +1,19 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_admin, only: [:admin]
+  
   # GET /lists
   # GET /lists.json
   def index
     @lists = List.all
-
   end
 
+
+  def admin
+    @lists = List.all
+     render :template => 'lists/admin'
+  end
+  
   # GET /lists/1
   # GET /lists/1.json
   def show
@@ -70,6 +76,13 @@ class ListsController < ApplicationController
       @list = List.find(params[:id])
     end
 
+    def require_admin
+      unless current_user.try(:admin?)
+        flash[:error] = "You must be an admin to access that page."
+        redirect_to "/" 
+      end
+    end
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def list_params
       params.require(:list).permit(:name, :user_id, :description, :rendered_description, :public, :user_ids => [])

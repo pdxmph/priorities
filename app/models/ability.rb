@@ -12,6 +12,8 @@ class Ability
     can :manage, Goal do |goal|
       goal.list.user_id == user.id
     end
+
+    can :manage, :all if user.admin == true
     
   end
 
