@@ -49,6 +49,10 @@
                     %li{:role => "presentation", :class => "divider"}
                     %li
                       = link_to "Create New List", new_list_path
+                    - if current_user.try(:admin?)
+                      %li
+                        = link_to "List Admin", lists_admin_path
+
 
             %li.dropdown
               %a{:href => "#", :class => "dropdown-toggle", "data-toggle" => "dropdown", :role => "button"}
@@ -67,10 +71,7 @@
                 %li
                   %a{:href => "http://mph.puddingbowl.org/2016/02/thinking-about-priorities/"}
                     Thinking About Priorities
-            %li
-              &nbsp;
-              &nbsp;
-              &nbsp;
+                    
 
                  
         .collapse.navbar-collapse
