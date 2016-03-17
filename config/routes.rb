@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/lists/admin' => 'lists#admin'
   get '/goals' => 'application#index'
   get '/docs' => 'application#docs'
+  get '/users/' => 'users#index'
   match '/users/:id', :to => 'users#show', :as => :user,  :via => :get
   post 'goals/set_goal_priority' => 'goals#set_goal_priority'
   post 'goals/set_goal_effort' => 'goals#set_goal_effort'
@@ -13,5 +14,6 @@ Rails.application.routes.draw do
   root 'application#index'
   resources :lists
   resources :goals
+  resources :users, only: [:show, :edit, :update]
 
 end

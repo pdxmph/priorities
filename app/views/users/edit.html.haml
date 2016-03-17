@@ -1,0 +1,40 @@
+%h2
+  Edit #{@user.email}
+.bg-danger.text-danger
+
+%br
+= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f|
+
+  .form-group
+    = f.label "First Name", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :first_name, :class => 'form-control'
+
+  .form-group
+    = f.label "Last Name", :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :last_name, :class => 'form-control'
+
+  .form-group
+    = f.label :email, :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.email_field :email, autofocus: true , :class => 'form-control'
+
+  .form-group
+    = f.label 'New password', :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.password_field :password, autocomplete: "off" , :class => 'form-control'
+      .help-block
+        %i (leave blank if you don't want to change it)
+
+  .form-group
+    = f.label 'Confirm new password', :class => 'col-sm-2 control-label'
+    .col-sm-4
+      = f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control'
+
+  .actions.col-sm-offset-2
+    .col-sm-4
+      = f.submit "Update", :class => 'btn btn-primary'
+-#      = link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn btn-default')
+
+

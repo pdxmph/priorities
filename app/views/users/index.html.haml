@@ -1,0 +1,22 @@
+%h1
+  User List
+
+
+%table.table
+  %thead
+    %tr
+      %th
+        User
+      %th
+        Email
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.full_name
+        %td
+          != user.email
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_user_path(user), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), user_path(user), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
