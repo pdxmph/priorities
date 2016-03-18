@@ -2,6 +2,16 @@ class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
 
 
+    def update_row_order
+     @goal = Goal.find(goal_params[:goal_id])
+     @goal.row_order_position = goal_params[:row_order_position]
+     @goal.save
+
+     render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
+    end
+
+
+  
   def set_goal_priority
     @priority = params[:priority]
     @goal = Goal.find(params[:goal])
@@ -125,6 +135,6 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:name,:list_id, :description, :team_id, :priority, :support, :effort)
+      params.require(:goal).permit(:goal_id,:name,:list_id, :description, :team_id, :priority, :support, :effort, :row_order_position)
     end
 end

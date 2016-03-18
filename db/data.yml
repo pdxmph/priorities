@@ -1,0 +1,4641 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - first_name
+  - last_name
+  - admin
+  records: 
+  - - '1'
+    - mph@puddingbowl.org
+    - $2a$10$NK0esK0tyd5tzFK1Cgp6Z.tpcZI03T5XBFRpIUj67e81R4eCVE4mO
+    - 
+    - 
+    - 
+    - '10'
+    - '2016-03-14 02:42:04.559796'
+    - '2016-03-13 21:09:26.891164'
+    - 67.189.35.121
+    - 67.189.35.121
+    - '2016-03-07 05:41:50.409374'
+    - '2016-03-14 02:42:04.560995'
+    - Mike
+    - Hall
+    - false
+  - - '2'
+    - alexander.johnson@puppetlabs.com
+    - $2a$10$06oOfwkv44qs5faP90s0I.J5RnnpDDyxQfJy54KNRybFjWHKg/bbS
+    - 
+    - 
+    - 
+    - '1'
+    - '2016-03-07 15:35:24.851275'
+    - '2016-03-07 15:35:24.851275'
+    - 76.115.225.248
+    - 76.115.225.248
+    - '2016-03-07 15:35:24.713329'
+    - '2016-03-07 15:35:24.852808'
+    - AJ
+    - Johnson
+    - false
+  - - '3'
+    - mike.hall@puppetlabs.com
+    - $2a$10$0EO74CkRbkazzH1XhsD2ouXZ7/IqQt3EXzEM9V1zllNw0FSLUiKzK
+    - 
+    - 
+    - '2016-03-15 22:22:11.199203'
+    - '14'
+    - '2016-03-15 22:22:11.216637'
+    - '2016-03-14 17:43:44.891566'
+    - 192.69.65.13
+    - 192.69.65.13
+    - '2016-03-07 17:05:40.555288'
+    - '2016-03-15 22:22:11.217537'
+    - Mike
+    - Hall
+    - true
+  - - '4'
+    - mc@puppetlabs.com
+    - $2a$10$bICCHZ4m4rldkBN5z3BKv.n17ESk8RHw8v9lCEZ2Z8Bm824gu0ijS
+    - 
+    - 
+    - 
+    - '1'
+    - '2016-03-08 01:00:07.147558'
+    - '2016-03-08 01:00:07.147558'
+    - 192.69.65.13
+    - 192.69.65.13
+    - '2016-03-08 01:00:07.003934'
+    - '2016-03-08 01:00:07.149072'
+    - M
+    - C
+    - false
+  - - '5'
+    - manny@puppetlabs.com
+    - $2a$10$QrF8jzgYmiaz0Ck9BEwGeeacO2y8JvYIBU/UOLWvSfj6ei2pFufz6
+    - 
+    - 
+    - 
+    - '2'
+    - '2016-03-14 01:19:45.475288'
+    - '2016-03-10 21:02:31.558226'
+    - 100.14.92.115
+    - 100.14.92.115
+    - '2016-03-10 21:02:31.416292'
+    - '2016-03-14 01:19:45.477056'
+    - Manny
+    - B
+    - false
+  - - '6'
+    - mail@carthik.net
+    - $2a$10$qzr1ca7bLwuBIBaPAVm1PuNlPuz4eQnFg9Pvj06dBZxn5lvlimvA2
+    - 
+    - 
+    - 
+    - '1'
+    - '2016-03-10 21:15:49.399075'
+    - '2016-03-10 21:15:49.399075'
+    - 192.69.65.11
+    - 192.69.65.11
+    - '2016-03-10 21:15:49.151119'
+    - '2016-03-10 21:15:49.400564'
+    - Carthik
+    - Sharma
+    - false
+  - - '7'
+    - wally@puppetlabs.com
+    - $2a$10$hp6svhiubTC6izwj0bbRFe6zMdTyrKfc5/ueOOr/ft1WF1e/oGSHm
+    - 
+    - 
+    - 
+    - '2'
+    - '2016-03-10 21:25:02.358101'
+    - '2016-03-10 21:17:33.434732'
+    - 192.69.65.13
+    - 192.69.65.13
+    - '2016-03-10 21:17:33.291239'
+    - '2016-03-10 21:25:02.35923'
+    - wally
+    - zambamabagioo
+    - false
+
+---
+goals:
+  columns:
+  - id
+  - name
+  - description
+  - team_id
+  - priority
+  - support
+  - effort
+  - created_at
+  - updated_at
+  - list_id
+  - rendered_description
+  records: 
+  - - '1'
+    - Sweep regularly
+    - ''
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-07 05:42:09.229017'
+    - '2016-03-07 05:42:14.92866'
+    - '1'
+    - 
+  - - '2'
+    - Working on things
+    - ''
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-07 06:04:24.838281'
+    - '2016-03-07 07:07:32.61042'
+    - '2'
+    - 
+  - - '3'
+    - Advance Puppet modules
+    - Expand module content, foster a vibrant module community, and enable module
+      developers (internal and external) with a best of breed puppet module development
+      experience.
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-07 15:40:30.317604'
+    - '2016-03-07 15:40:30.317604'
+    - '3'
+    - 
+  - - '4'
+    - SSL cert behaviour audit
+    - ''
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-07 18:28:17.284111'
+    - '2016-03-08 19:43:48.688399'
+    - '5'
+    - 
+  - - '5'
+    - CI.next
+    - ''
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-07 18:28:33.612266'
+    - '2016-03-08 19:44:05.507511'
+    - '5'
+    - 
+  - - '7'
+    - Something
+    - ''
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-08 01:00:30.389457'
+    - '2016-03-08 01:00:42.785911'
+    - '6'
+    - 
+  - - '8'
+    - Another thing with excellence
+    - ''
+    - 
+    - '1'
+    - '1'
+    - 
+    - '2016-03-08 01:00:37.620599'
+    - '2016-03-08 01:00:47.279686'
+    - '6'
+    - 
+  - - '10'
+    - HUP Support
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:45:58.438282'
+    - '2016-03-08 01:45:58.438282'
+    - '5'
+    - 
+  - - '11'
+    - TK Metrics
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:46:03.564744'
+    - '2016-03-08 01:46:03.564744'
+    - '5'
+    - 
+  - - '13'
+    - HA
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:46:17.221252'
+    - '2016-03-08 01:46:17.221252'
+    - '5'
+    - 
+  - - '14'
+    - AIO Server
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:46:23.02057'
+    - '2016-03-08 01:46:23.02057'
+    - '5'
+    - 
+  - - '15'
+    - Performance Baseline/Regression Detection
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:46:35.03862'
+    - '2016-03-08 01:46:35.03862'
+    - '5'
+    - 
+  - - '16'
+    - i18n - Retrofit existing strings
+    - ''
+    - 
+    - '1'
+    - '1'
+    - 
+    - '2016-03-08 01:46:50.000128'
+    - '2016-03-09 14:55:45.694911'
+    - '5'
+    - 
+  - - '17'
+    - i18n - new strings
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:47:15.059945'
+    - '2016-03-08 01:47:15.059945'
+    - '5'
+    - 
+  - - '18'
+    - Order-independent Services
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:47:26.021836'
+    - '2016-03-08 01:47:26.021836'
+    - '5'
+    - 
+  - - '19'
+    - AOT Compilation
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:48:02.275351'
+    - '2016-03-08 01:48:02.275351'
+    - '5'
+    - 
+  - - '20'
+    - Plumbing Services with PCP
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:48:12.182841'
+    - '2016-03-08 01:48:12.182841'
+    - '5'
+    - 
+  - - '21'
+    - Activity Service Integration
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:48:33.671051'
+    - '2016-03-08 01:48:33.671051'
+    - '5'
+    - 
+  - - '22'
+    - Upgrade to Ember 2
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:49:11.815735'
+    - '2016-03-08 01:49:11.815735'
+    - '5'
+    - 
+  - - '23'
+    - Front End Scale
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:49:21.947662'
+    - '2016-03-08 01:49:21.947662'
+    - '5'
+    - 
+  - - '24'
+    - Branding
+    - ''
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-08 01:49:28.124411'
+    - '2016-03-09 14:55:32.713812'
+    - '5'
+    - 
+  - - '25'
+    - UI Toolkit
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-08 01:49:34.104974'
+    - '2016-03-08 01:49:34.104974'
+    - '5'
+    - 
+  - - '26'
+    - Telemetry
+    - ''
+    - 
+    - '3'
+    - 
+    - 
+    - '2016-03-08 01:49:39.759473'
+    - '2016-03-08 19:44:13.462941'
+    - '5'
+    - 
+  - - '27'
+    - Review priorities
+    - Have a look at some priorities
+    - 
+    - '2'
+    - '3'
+    - '1'
+    - '2016-03-10 21:03:32.472833'
+    - '2016-03-14 15:38:58.029574'
+    - '7'
+    - |
+      <p>Have a look at some priorities</p>
+  - - '28'
+    - A Simple goal
+    - ''
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-10 21:11:09.968681'
+    - '2016-03-10 21:11:15.749706'
+    - '8'
+    - 
+  - - '29'
+    - reorg
+    - ''
+    - 
+    - '3'
+    - '1'
+    - 
+    - '2016-03-10 21:37:24.717343'
+    - '2016-03-10 21:49:57.700946'
+    - '9'
+    - 
+  - - '30'
+    - write a listicle
+    - ''
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-10 21:37:40.864326'
+    - '2016-03-10 21:37:40.864326'
+    - '9'
+    - 
+  - - '31'
+    - plan all the things
+    - ''
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-10 21:37:52.070911'
+    - '2016-03-10 21:50:06.034477'
+    - '9'
+    - 
+  - - '32'
+    - plan some of the things
+    - ''
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-10 21:38:02.720316'
+    - '2016-03-10 21:50:13.344405'
+    - '9'
+    - 
+  - - '33'
+    - weep
+    - ''
+    - 
+    - '3'
+    - '1'
+    - 
+    - '2016-03-10 21:44:57.949136'
+    - '2016-03-10 21:50:24.197875'
+    - '9'
+    - 
+  - - '34'
+    - gnash teeth
+    - ''
+    - 
+    - '1'
+    - '3'
+    - 
+    - '2016-03-10 21:45:05.034165'
+    - '2016-03-10 21:50:31.864218'
+    - '9'
+    - 
+  - - '35'
+    - plan for plans
+    - ''
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-10 21:45:15.344935'
+    - '2016-03-10 21:50:37.690935'
+    - '9'
+    - 
+  - - '36'
+    - metrics
+    - ''
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-10 21:50:48.005642'
+    - '2016-03-10 21:50:53.175925'
+    - '9'
+    - 
+  - - '37'
+    - New Installer
+    - 'Development: '
+    - 
+    - '3'
+    - '1'
+    - 
+    - '2016-03-14 04:40:36.490842'
+    - '2016-03-14 04:40:36.490842'
+    - '10'
+    - |
+      <p>Development:</p>
+  - - '38'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.55382'
+    - '2016-03-14 04:40:36.55382'
+    - '11'
+    - |
+      <p>:</p>
+  - - '39'
+    - HA Phase 1 - puppet runs keep working (PE-14305)
+    - 'defined, needs dev spike/research: work started during burnside may conclude
+      in Couch or Davis dep on prioritization. may shuffle work across teams.'
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-14 04:40:36.578625'
+    - '2016-03-14 04:40:36.578625'
+    - '12'
+    - |
+      <p>defined, needs dev spike/research: work started during burnside may conclude in Couch or Davis dep on prioritization. may shuffle work across teams.</p>
+  - - '40'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.589874'
+    - '2016-03-14 04:40:36.589874'
+    - '11'
+    - |
+      <p>:</p>
+  - - '41'
+    - Support Ember Upgrade (PE-12805)
+    - 'developing: support UI toolkit team w/ember upgrade for PE console'
+    - 
+    - '3'
+    - '1'
+    - 
+    - '2016-03-14 04:40:36.605952'
+    - '2016-03-14 04:40:36.605952'
+    - '12'
+    - |
+      <p>developing: support UI toolkit team w/ember upgrade for PE console</p>
+  - - '42'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.622589'
+    - '2016-03-14 04:40:36.622589'
+    - '11'
+    - |
+      <p>:</p>
+  - - '43'
+    - HA Phase 1 - puppet runs keep working (PE-14305)
+    - 'defined, needs dev spike/research: work started during burnside may conclude
+      in Couch or Davis dep on prioritization. Currently no support but may adopt
+      work from PDB/NM'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:36.653279'
+    - '2016-03-14 04:40:36.653279'
+    - '13'
+    - |
+      <p>defined, needs dev spike/research: work started during burnside may conclude in Couch or Davis dep on prioritization. Currently no support but may adopt work from PDB/NM</p>
+  - - '44'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.665447'
+    - '2016-03-14 04:40:36.665447'
+    - '11'
+    - |
+      <p>:</p>
+  - - '45'
+    - Vanagon on Windows (RE-4101) Support
+    - 'ongoing: Mostly support needed by Windows experts'
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-14 04:40:36.69427'
+    - '2016-03-14 04:40:36.69427'
+    - '14'
+    - |
+      <p>ongoing: Mostly support needed by Windows experts</p>
+  - - '46'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.70706'
+    - '2016-03-14 04:40:36.70706'
+    - '11'
+    - |
+      <p>:</p>
+  - - '47'
+    - Security hardening
+    - 'defining: '
+    - 
+    - '3'
+    - '1'
+    - 
+    - '2016-03-14 04:40:36.736284'
+    - '2016-03-14 04:40:36.736284'
+    - '15'
+    - |
+      <p>defining:</p>
+  - - '48'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.748729'
+    - '2016-03-14 04:40:36.748729'
+    - '11'
+    - |
+      <p>:</p>
+  - - '49'
+    - Environment Isolation Support
+    - 'defining: Partial start on definition, but no plan yet. Teamed with Server. '
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:36.777629'
+    - '2016-03-14 04:40:36.777629'
+    - '16'
+    - |
+      <p>defining: Partial start on definition, but no plan yet. Teamed with Server.</p>
+  - - '50'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.788604'
+    - '2016-03-14 04:40:36.788604'
+    - '11'
+    - |
+      <p>:</p>
+  - - '51'
+    - Ember Upgrade
+    - 'developing: The longer it takes us to complete this work the more effort we
+      waste in managing multiple branches of code and doing merge ups.  Therefore
+      I would like to get additional help from some additional GUI developers.'
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-14 04:40:36.819679'
+    - '2016-03-14 04:40:36.819679'
+    - '17'
+    - |
+      <p>developing: The longer it takes us to complete this work the more effort we waste in managing multiple branches of code and doing merge ups.  Therefore I would like to get additional help from some additional GUI developers.</p>
+  - - '52'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.830801'
+    - '2016-03-14 04:40:36.830801'
+    - '11'
+    - |
+      <p>:</p>
+  - - '53'
+    - Client tools for WIndows
+    - 'Defined: '
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:36.861919'
+    - '2016-03-14 04:40:36.861919'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '54'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.873163'
+    - '2016-03-14 04:40:36.873163'
+    - '11'
+    - |
+      <p>:</p>
+  - - '55'
+    - Vanagon support for Windows
+    - 'In progress: '
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-14 04:40:36.888941'
+    - '2016-03-14 04:40:36.888941'
+    - '18'
+    - |
+      <p>In progress:</p>
+  - - '56'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.907068'
+    - '2016-03-14 04:40:36.907068'
+    - '11'
+    - |
+      <p>:</p>
+  - - '57'
+    - HUP for faster startup time
+    - 'Testing,Devloping: Est Effort: L'
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-14 04:40:36.936965'
+    - '2016-03-14 04:40:36.936965'
+    - '19'
+    - |
+      <p>Testing,Devloping: Est Effort: L</p>
+  - - '58'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:36.948437'
+    - '2016-03-14 04:40:36.948437'
+    - '11'
+    - |
+      <p>:</p>
+  - - '59'
+    - NC Class Refresh for performance and memory usage
+    - 'Testing,Devloping: Est Effort: L'
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-14 04:40:36.965315'
+    - '2016-03-14 04:40:36.965315'
+    - '19'
+    - |
+      <p>Testing,Devloping: Est Effort: L</p>
+  - - '60'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.005614'
+    - '2016-03-14 04:40:37.005614'
+    - '11'
+    - |
+      <p>:</p>
+  - - '61'
+    - Environment Isolation
+    - 'Designing: Est Effort: XL'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.023659'
+    - '2016-03-14 04:40:37.023659'
+    - '19'
+    - |
+      <p>Designing: Est Effort: XL</p>
+  - - '62'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.039767'
+    - '2016-03-14 04:40:37.039767'
+    - '11'
+    - |
+      <p>:</p>
+  - - '63'
+    - Foundational work to support Environment Isolation
+    - 'Defining: Est Effort: L'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.056557'
+    - '2016-03-14 04:40:37.056557'
+    - '19'
+    - |
+      <p>Defining: Est Effort: L</p>
+  - - '64'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.073954'
+    - '2016-03-14 04:40:37.073954'
+    - '11'
+    - |
+      <p>:</p>
+  - - '65'
+    - HA for Couch - testing
+    - 'Not scoped: Not yet scheduled'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.103749'
+    - '2016-03-14 04:40:37.103749'
+    - '20'
+    - |
+      <p>Not scoped: Not yet scheduled</p>
+  - - '66'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.114732'
+    - '2016-03-14 04:40:37.114732'
+    - '11'
+    - |
+      <p>:</p>
+  - - '67'
+    - HA
+    - 'Developing: '
+    - 
+    - '3'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.145045'
+    - '2016-03-14 04:40:37.145045'
+    - '21'
+    - |
+      <p>Developing:</p>
+  - - '68'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.156437'
+    - '2016-03-14 04:40:37.156437'
+    - '11'
+    - |
+      <p>:</p>
+  - - '69'
+    - Telemetry
+    - ': '
+    - 
+    - '3'
+    - 
+    - 
+    - '2016-03-14 04:40:37.172973'
+    - '2016-03-14 04:40:37.172973'
+    - '17'
+    - |
+      <p>:</p>
+  - - '70'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.188132'
+    - '2016-03-14 04:40:37.188132'
+    - '11'
+    - |
+      <p>:</p>
+  - - '71'
+    - Zendesk icon
+    - ': '
+    - 
+    - '2'
+    - 
+    - 
+    - '2016-03-14 04:40:37.232063'
+    - '2016-03-14 04:40:37.232063'
+    - '17'
+    - |
+      <p>:</p>
+  - - '72'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.246586'
+    - '2016-03-14 04:40:37.246586'
+    - '11'
+    - |
+      <p>:</p>
+  - - '73'
+    - HA / Scale
+    - 'defining: The only major initiative on the PCP roadmap. No attention from Product
+      or Eng. (Team is busy with realizing Phase 1 goals.)'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.256553'
+    - '2016-03-14 04:40:37.256553'
+    - '15'
+    - |
+      <p>defining: The only major initiative on the PCP roadmap. No attention from Product or Eng. (Team is busy with realizing Phase 1 goals.)</p>
+  - - '74'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.272135'
+    - '2016-03-14 04:40:37.272135'
+    - '11'
+    - |
+      <p>:</p>
+  - - '75'
+    - Native Parser
+    - 'early phases are defined, followon phases are not: Long runway. Possible first
+      deliverable in Davis. Feeds into many other possible initiatives: Async catalogs,
+      next-gen performance, native agent, orchestration, etc etc.'
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-14 04:40:37.302956'
+    - '2016-03-14 04:40:37.302956'
+    - '22'
+    - |
+      <p>early phases are defined, followon phases are not: Long runway. Possible first deliverable in Davis. Feeds into many other possible initiatives: Async catalogs, next-gen performance, native agent, orchestration, etc etc.</p>
+  - - '76'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.315728'
+    - '2016-03-14 04:40:37.315728'
+    - '11'
+    - |
+      <p>:</p>
+  - - '77'
+    - Improved ease of upgrades
+    - 'defining: Hot topic lately. Definition just starting.'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.331874'
+    - '2016-03-14 04:40:37.331874'
+    - '22'
+    - |
+      <p>defining: Hot topic lately. Definition just starting.</p>
+  - - '78'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.348895'
+    - '2016-03-14 04:40:37.348895'
+    - '11'
+    - |
+      <p>:</p>
+  - - '79'
+    - Performance fixes
+    - 'Ongoing: '
+    - 
+    - '3'
+    - '2'
+    - 
+    - '2016-03-14 04:40:37.364909'
+    - '2016-03-14 04:40:37.364909'
+    - '21'
+    - |
+      <p>Ongoing:</p>
+  - - '80'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.380148'
+    - '2016-03-14 04:40:37.380148'
+    - '11'
+    - |
+      <p>:</p>
+  - - '81'
+    - Drift - new storage
+    - 'Not started: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:37.398977'
+    - '2016-03-14 04:40:37.398977'
+    - '21'
+    - |
+      <p>Not started:</p>
+  - - '82'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.414347'
+    - '2016-03-14 04:40:37.414347'
+    - '11'
+    - |
+      <p>:</p>
+  - - '83'
+    - HA for the PE Console (PE-6965)
+    - 'defining: '
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.432313'
+    - '2016-03-14 04:40:37.432313'
+    - '13'
+    - |
+      <p>defining:</p>
+  - - '84'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.448277'
+    - '2016-03-14 04:40:37.448277'
+    - '11'
+    - |
+      <p>:</p>
+  - - '85'
+    - Module testing framework
+    - 'defining: Increasing demands for sdk, puppet-lint replacement, rspec-puppet
+      improvements, etc. Ties into several other initiatives.'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.465551'
+    - '2016-03-14 04:40:37.465551'
+    - '22'
+    - |
+      <p>defining: Increasing demands for sdk, puppet-lint replacement, rspec-puppet improvements, etc. Ties into several other initiatives.</p>
+  - - '86'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.48235'
+    - '2016-03-14 04:40:37.48235'
+    - '11'
+    - |
+      <p>:</p>
+  - - '87'
+    - HA (Code Mgr/File Sync, CA)
+    - 'Not started: Est Effort: XL'
+    - 
+    - '3'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.49854'
+    - '2016-03-14 04:40:37.49854'
+    - '19'
+    - |
+      <p>Not started: Est Effort: XL</p>
+  - - '88'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.515515'
+    - '2016-03-14 04:40:37.515515'
+    - '11'
+    - |
+      <p>:</p>
+  - - '89'
+    - Scale/Perf Enhancements
+    - ': '
+    - 
+    - '3'
+    - 
+    - 
+    - '2016-03-14 04:40:37.544919'
+    - '2016-03-14 04:40:37.544919'
+    - '23'
+    - |
+      <p>:</p>
+  - - '90'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.556845'
+    - '2016-03-14 04:40:37.556845'
+    - '11'
+    - |
+      <p>:</p>
+  - - '91'
+    - Security/Compliance Drift Reporting
+    - 'UX Designing: '
+    - 
+    - '2'
+    - 
+    - 
+    - '2016-03-14 04:40:37.574225'
+    - '2016-03-14 04:40:37.574225'
+    - '23'
+    - |
+      <p>UX Designing:</p>
+  - - '92'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.589774'
+    - '2016-03-14 04:40:37.589774'
+    - '11'
+    - |
+      <p>:</p>
+  - - '93'
+    - CM "Overview" Dashboard v2.0 /PQL
+    - 'UX almost complete: '
+    - 
+    - '3'
+    - 
+    - 
+    - '2016-03-14 04:40:37.606523'
+    - '2016-03-14 04:40:37.606523'
+    - '23'
+    - |
+      <p>UX almost complete:</p>
+  - - '94'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.624138'
+    - '2016-03-14 04:40:37.624138'
+    - '11'
+    - |
+      <p>:</p>
+  - - '95'
+    - X.Y.Z Release
+    - 'Ongoing: This includes Z releases that are hard to plan in advance'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.639936'
+    - '2016-03-14 04:40:37.639936'
+    - '10'
+    - |
+      <p>Ongoing: This includes Z releases that are hard to plan in advance</p>
+  - - '96'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.65494'
+    - '2016-03-14 04:40:37.65494'
+    - '11'
+    - |
+      <p>:</p>
+  - - '97'
+    - Visualizing Node Group Hierarchy in the PE GUI (PE-12702)
+    - 'developing: work started during burnside may conclude in Couch dep on prioritization '
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:37.66529'
+    - '2016-03-14 04:40:37.66529'
+    - '12'
+    - |
+      <p>developing: work started during burnside may conclude in Couch dep on prioritization</p>
+  - - '98'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.681627'
+    - '2016-03-14 04:40:37.681627'
+    - '11'
+    - |
+      <p>:</p>
+  - - '99'
+    - Improving reliability/performance of testing (PE-13686)
+    - 'developing: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:37.699151'
+    - '2016-03-14 04:40:37.699151'
+    - '12'
+    - |
+      <p>developing:</p>
+  - - '100'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.71447'
+    - '2016-03-14 04:40:37.71447'
+    - '11'
+    - |
+      <p>:</p>
+  - - '101'
+    - Manage classes/data of Individual Nodes in the NC and GUI (PE-12633)
+    - 'UX designing: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:37.732537'
+    - '2016-03-14 04:40:37.732537'
+    - '12'
+    - |
+      <p>UX designing:</p>
+  - - '102'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.800754'
+    - '2016-03-14 04:40:37.800754'
+    - '11'
+    - |
+      <p>:</p>
+  - - '103'
+    - Token Revocation in RBAC (PE-10704)
+    - 'delivering: will deliver API in Burnside and possibly CLI in Couch dep on prioritization '
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.814523'
+    - '2016-03-14 04:40:37.814523'
+    - '13'
+    - |
+      <p>delivering: will deliver API in Burnside and possibly CLI in Couch dep on prioritization</p>
+  - - '104'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.832014'
+    - '2016-03-14 04:40:37.832014'
+    - '11'
+    - |
+      <p>:</p>
+  - - '105'
+    - Update PE Console Brand Identity (PE-13098)
+    - 'developing: '
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.84877'
+    - '2016-03-14 04:40:37.84877'
+    - '13'
+    - |
+      <p>developing:</p>
+  - - '106'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.865017'
+    - '2016-03-14 04:40:37.865017'
+    - '11'
+    - |
+      <p>:</p>
+  - - '107'
+    - Windows Support for Puppet Access CLI (PE-11605)
+    - 'developing: '
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.881512'
+    - '2016-03-14 04:40:37.881512'
+    - '13'
+    - |
+      <p>developing:</p>
+  - - '108'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.898739'
+    - '2016-03-14 04:40:37.898739'
+    - '11'
+    - |
+      <p>:</p>
+  - - '109'
+    - My Team's Nodes (PE-7338)
+    - 'defining: work ongoing for some time but little progress made due to inconsistent
+      prioritization across impacted teams. delivery target uncertain.'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:37.915651'
+    - '2016-03-14 04:40:37.915651'
+    - '13'
+    - |
+      <p>defining: work ongoing for some time but little progress made due to inconsistent prioritization across impacted teams. delivery target uncertain.</p>
+  - - '110'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.931555'
+    - '2016-03-14 04:40:37.931555'
+    - '11'
+    - |
+      <p>:</p>
+  - - '111'
+    - Improving reliability/performance of testing (PE-13686)
+    - 'developing: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:37.948943'
+    - '2016-03-14 04:40:37.948943'
+    - '13'
+    - |
+      <p>developing:</p>
+  - - '112'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.964703'
+    - '2016-03-14 04:40:37.964703'
+    - '11'
+    - |
+      <p>:</p>
+  - - '113'
+    - Azure Image Building Improvements (RE-6196)
+    - 'Ongoing: This has been ongoing for a while, mostly delayed by issues with partner'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:37.98039'
+    - '2016-03-14 04:40:37.98039'
+    - '14'
+    - |
+      <p>Ongoing: This has been ongoing for a while, mostly delayed by issues with partner</p>
+  - - '114'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:37.999013'
+    - '2016-03-14 04:40:37.999013'
+    - '11'
+    - |
+      <p>:</p>
+  - - '115'
+    - Non-US Language/Unicode Support for Windows (PUP-3746)
+    - 'ongoing: ongoing work'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:38.014271'
+    - '2016-03-14 04:40:38.014271'
+    - '14'
+    - |
+      <p>ongoing: ongoing work</p>
+  - - '116'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.03267'
+    - '2016-03-14 04:40:38.03267'
+    - '11'
+    - |
+      <p>:</p>
+  - - '117'
+    - Direct Puppet
+    - 'phase 2 is delivering, followon phases are TBD: Couch: mop up. Davis+: needs
+      definition'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:38.048222'
+    - '2016-03-14 04:40:38.048222'
+    - '16'
+    - |
+      <p>phase 2 is delivering, followon phases are TBD: Couch: mop up. Davis+: needs definition</p>
+  - - '118'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.089041'
+    - '2016-03-14 04:40:38.089041'
+    - '11'
+    - |
+      <p>:</p>
+  - - '119'
+    - Core Puppet
+    - 'ongoing: Core puppet is neglected. I''m hearing a lot about this from Luke
+      and from product. Decision needed on our staffing level here. Many, many areas
+      for improvement.'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.107385'
+    - '2016-03-14 04:40:38.107385'
+    - '16'
+    - |
+      <p>ongoing: Core puppet is neglected. I'm hearing a lot about this from Luke and from product. Decision needed on our staffing level here. Many, many areas for improvement.</p>
+  - - '120'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.123056'
+    - '2016-03-14 04:40:38.123056'
+    - '11'
+    - |
+      <p>:</p>
+  - - '121'
+    - HA
+    - 'In some meetings: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.140604'
+    - '2016-03-14 04:40:38.140604'
+    - '18'
+    - |
+      <p>In some meetings:</p>
+  - - '122'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.156469'
+    - '2016-03-14 04:40:38.156469'
+    - '11'
+    - |
+      <p>:</p>
+  - - '123'
+    - Platform Enablement - Ubuntu 16.04
+    - 'Defined: '
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:38.171984'
+    - '2016-03-14 04:40:38.171984'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '124'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.190755'
+    - '2016-03-14 04:40:38.190755'
+    - '11'
+    - |
+      <p>:</p>
+  - - '125'
+    - Platform Enablment - zLinux
+    - 'Defined: Signed without meeting minimum headcount requirements'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.205936'
+    - '2016-03-14 04:40:38.205936'
+    - '18'
+    - |
+      <p>Defined: Signed without meeting minimum headcount requirements</p>
+  - - '126'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.224171'
+    - '2016-03-14 04:40:38.224171'
+    - '11'
+    - |
+      <p>:</p>
+  - - '127'
+    - Puppet Agent Insurgency (Process improvement)
+    - 'In pgoress: People getting pulled to put out fires rather than improve process'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.240541'
+    - '2016-03-14 04:40:38.240541'
+    - '18'
+    - |
+      <p>In pgoress: People getting pulled to put out fires rather than improve process</p>
+  - - '128'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.257491'
+    - '2016-03-14 04:40:38.257491'
+    - '11'
+    - |
+      <p>:</p>
+  - - '129'
+    - CI.next
+    - 'Defined: Only part of one person working on this right now'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.273996'
+    - '2016-03-14 04:40:38.273996'
+    - '18'
+    - |
+      <p>Defined: Only part of one person working on this right now</p>
+  - - '130'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.290734'
+    - '2016-03-14 04:40:38.290734'
+    - '11'
+    - |
+      <p>:</p>
+  - - '131'
+    - Client tools for Mac
+    - 'Defined: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.307406'
+    - '2016-03-14 04:40:38.307406'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '132'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.323989'
+    - '2016-03-14 04:40:38.323989'
+    - '11'
+    - |
+      <p>:</p>
+  - - '133'
+    - Open Source Client Tools
+    - 'Defining: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.340042'
+    - '2016-03-14 04:40:38.340042'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '134'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.357563'
+    - '2016-03-14 04:40:38.357563'
+    - '11'
+    - |
+      <p>:</p>
+  - - '135'
+    - PE 3.8.5
+    - 'Defining: Ship date is May 03'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.371969'
+    - '2016-03-14 04:40:38.371969'
+    - '18'
+    - |
+      <p>Defining: Ship date is May 03</p>
+  - - '136'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.390736'
+    - '2016-03-14 04:40:38.390736'
+    - '11'
+    - |
+      <p>:</p>
+  - - '137'
+    - PE 2016.1.z
+    - 'Defining: Ship date is May 03'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.406894'
+    - '2016-03-14 04:40:38.406894'
+    - '18'
+    - |
+      <p>Defining: Ship date is May 03</p>
+  - - '138'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.423484'
+    - '2016-03-14 04:40:38.423484'
+    - '11'
+    - |
+      <p>:</p>
+  - - '139'
+    - Pooler Image Building
+    - 'In progress: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.440579'
+    - '2016-03-14 04:40:38.440579'
+    - '18'
+    - |
+      <p>In progress:</p>
+  - - '140'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.465696'
+    - '2016-03-14 04:40:38.465696'
+    - '11'
+    - |
+      <p>:</p>
+  - - '141'
+    - Install/Allocate new AIX capacity
+    - 'In progress: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.480368'
+    - '2016-03-14 04:40:38.480368'
+    - '18'
+    - |
+      <p>In progress:</p>
+  - - '142'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.499151'
+    - '2016-03-14 04:40:38.499151'
+    - '11'
+    - |
+      <p>:</p>
+  - - '143'
+    - Platform Enablement - Window Server 2016
+    - 'Defining: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.515138'
+    - '2016-03-14 04:40:38.515138'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '144'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.531664'
+    - '2016-03-14 04:40:38.531664'
+    - '11'
+    - |
+      <p>:</p>
+  - - '145'
+    - Hotfixes / Support Esclations
+    - 'Ongoing: '
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:38.548999'
+    - '2016-03-14 04:40:38.548999'
+    - '18'
+    - |
+      <p>Ongoing:</p>
+  - - '146'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.564665'
+    - '2016-03-14 04:40:38.564665'
+    - '11'
+    - |
+      <p>:</p>
+  - - '147'
+    - Security Work
+    - 'ongoing: '
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:38.580207'
+    - '2016-03-14 04:40:38.580207'
+    - '18'
+    - |
+      <p>ongoing:</p>
+  - - '148'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.589253'
+    - '2016-03-14 04:40:38.589253'
+    - '11'
+    - |
+      <p>:</p>
+  - - '149'
+    - Download infrastructure migration
+    - 'Defined: If we don''t complete this, one day we''re going to attempt to ship
+      software and it will just not work'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.60765'
+    - '2016-03-14 04:40:38.60765'
+    - '18'
+    - |
+      <p>Defined: If we don't complete this, one day we're going to attempt to ship software and it will just not work</p>
+  - - '150'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.62353'
+    - '2016-03-14 04:40:38.62353'
+    - '11'
+    - |
+      <p>:</p>
+  - - '151'
+    - Security Audit Coordination
+    - 'Defining: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.657384'
+    - '2016-03-14 04:40:38.657384'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '152'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.672248'
+    - '2016-03-14 04:40:38.672248'
+    - '11'
+    - |
+      <p>:</p>
+  - - '153'
+    - Package Signing Automation
+    - 'Defining: Must happen or we can''t ship Windows/Solaris/Mac'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.680868'
+    - '2016-03-14 04:40:38.680868'
+    - '18'
+    - |
+      <p>Defining: Must happen or we can't ship Windows/Solaris/Mac</p>
+  - - '154'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.698863'
+    - '2016-03-14 04:40:38.698863'
+    - '11'
+    - |
+      <p>:</p>
+  - - '155'
+    - Main GPG key expires in July
+    - 'Defining: Must happen or we can''t ship PE/RPM/APT'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.715711'
+    - '2016-03-14 04:40:38.715711'
+    - '18'
+    - |
+      <p>Defining: Must happen or we can't ship PE/RPM/APT</p>
+  - - '156'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.731849'
+    - '2016-03-14 04:40:38.731849'
+    - '11'
+    - |
+      <p>:</p>
+  - - '157'
+    - Promotion blocking
+    - 'Defined: Block package promotion if pipelines red'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.746766'
+    - '2016-03-14 04:40:38.746766'
+    - '18'
+    - |
+      <p>Defined: Block package promotion if pipelines red</p>
+  - - '158'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.756826'
+    - '2016-03-14 04:40:38.756826'
+    - '11'
+    - |
+      <p>:</p>
+  - - '159'
+    - Performance and memory testing
+    - 'Developing: Est Effort: XL'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:38.772042'
+    - '2016-03-14 04:40:38.772042'
+    - '19'
+    - |
+      <p>Developing: Est Effort: XL</p>
+  - - '160'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.790782'
+    - '2016-03-14 04:40:38.790782'
+    - '11'
+    - |
+      <p>:</p>
+  - - '161'
+    - File Sync UX fixes
+    - 'Defining, Developing: Est Effort: XL'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:38.806012'
+    - '2016-03-14 04:40:38.806012'
+    - '19'
+    - |
+      <p>Defining, Developing: Est Effort: XL</p>
+  - - '162'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.824263'
+    - '2016-03-14 04:40:38.824263'
+    - '11'
+    - |
+      <p>:</p>
+  - - '163'
+    - Puppet Settings
+    - 'Not started: Est Effort: XL'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:38.840522'
+    - '2016-03-14 04:40:38.840522'
+    - '19'
+    - |
+      <p>Not started: Est Effort: XL</p>
+  - - '164'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.857535'
+    - '2016-03-14 04:40:38.857535'
+    - '11'
+    - |
+      <p>:</p>
+  - - '165'
+    - Release Support
+    - 'Ongoing: Bridging gap between CI.now and CI.next: Includes  bug fixing, minor
+      usability improvements.'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:38.887016'
+    - '2016-03-14 04:40:38.887016'
+    - '24'
+    - |
+      <p>Ongoing: Bridging gap between CI.now and CI.next: Includes  bug fixing, minor usability improvements.</p>
+  - - '166'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.899215'
+    - '2016-03-14 04:40:38.899215'
+    - '11'
+    - |
+      <p>:</p>
+  - - '167'
+    - CI.next Phase 1 (QENG-3505)
+    - |-
+      Not started: QE required actions for CI.next.
+      Starting Sprint QE 2016-03-23
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:38.915706'
+    - '2016-03-14 04:40:38.915706'
+    - '24'
+    - |
+      <p>Not started: QE required actions for CI.next.
+      Starting Sprint QE 2016-03-23</p>
+  - - '168'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.931893'
+    - '2016-03-14 04:40:38.931893'
+    - '11'
+    - |
+      <p>:</p>
+  - - '169'
+    - Puppet Agent Gorilla Insurgency - AIO pipeline should clone from github mirrors
+      (QENG-1855)
+    - 'Planned: Sprint QE 2016-03-23'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:38.948559'
+    - '2016-03-14 04:40:38.948559'
+    - '24'
+    - |
+      <p>Planned: Sprint QE 2016-03-23</p>
+  - - '170'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.965771'
+    - '2016-03-14 04:40:38.965771'
+    - '11'
+    - |
+      <p>:</p>
+  - - '171'
+    - Puppet Agent Gorilla Insurgency - Create "puppet-agent package validation" pipeline  (QENG-3564)
+    - 'Developing: Sprint QE 2016-03-16'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:38.982094'
+    - '2016-03-14 04:40:38.982094'
+    - '24'
+    - |
+      <p>Developing: Sprint QE 2016-03-16</p>
+  - - '172'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:38.997581'
+    - '2016-03-14 04:40:38.997581'
+    - '11'
+    - |
+      <p>:</p>
+  - - '173'
+    - Puppet Agent Gorilla Insurgency - puppet-agent testing should share VMs between
+      each component test suite (QENG-3503)
+    - 'Developing: Sprint QE 2016-03-16'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:39.015707'
+    - '2016-03-14 04:40:39.015707'
+    - '24'
+    - |
+      <p>Developing: Sprint QE 2016-03-16</p>
+  - - '174'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.032138'
+    - '2016-03-14 04:40:39.032138'
+    - '11'
+    - |
+      <p>:</p>
+  - - '175'
+    - Puppet Agent Gorilla Insurgency - Audit puppet-agent jobs to ensure we're using
+      the gem mirror consistently (QENG-3133)
+    - 'Not started: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.049157'
+    - '2016-03-14 04:40:39.049157'
+    - '24'
+    - |
+      <p>Not started: Not yet scheduled</p>
+  - - '176'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.065209'
+    - '2016-03-14 04:40:39.065209'
+    - '11'
+    - |
+      <p>:</p>
+  - - '177'
+    - Puppet Agent Gorilla Insurgency - Add --retry to bundle install calls in jenkins
+      jobs (QENG-2311)
+    - 'Planned: Sprint QE 2016-03-23'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:39.090369'
+    - '2016-03-14 04:40:39.090369'
+    - '24'
+    - |
+      <p>Planned: Sprint QE 2016-03-23</p>
+  - - '178'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.106246'
+    - '2016-03-14 04:40:39.106246'
+    - '11'
+    - |
+      <p>:</p>
+  - - '179'
+    - Puppet Agent Gorilla Insurgency - Track puppet-agent pipeline metrics in ELK
+      (QENG-3563)
+    - 'Developing: Sprint QE 2016-03-16'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:39.124155'
+    - '2016-03-14 04:40:39.124155'
+    - '24'
+    - |
+      <p>Developing: Sprint QE 2016-03-16</p>
+  - - '180'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.140316'
+    - '2016-03-14 04:40:39.140316'
+    - '11'
+    - |
+      <p>:</p>
+  - - '181'
+    - puppet-agent 1.4.z Allow hypervisor to be set to "none" on a per-host basis
+      in beaker-hostgenerator (QENG-3276)
+    - 'To Do: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.157403'
+    - '2016-03-14 04:40:39.157403'
+    - '24'
+    - |
+      <p>To Do: Not yet scheduled</p>
+  - - '182'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.199228'
+    - '2016-03-14 04:40:39.199228'
+    - '11'
+    - |
+      <p>:</p>
+  - - '183'
+    - puppet-agent 1.4.z Add support for huaweios-6-powerpc (BKR-680)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.214911'
+    - '2016-03-14 04:40:39.214911'
+    - '24'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '184'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.231763'
+    - '2016-03-14 04:40:39.231763'
+    - '11'
+    - |
+      <p>:</p>
+  - - '185'
+    - puppet-agent 1.4.z Add support for Ubuntu 16.04 Xenial (amd64, i386) (BKR-708)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.257603'
+    - '2016-03-14 04:40:39.257603'
+    - '24'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '186'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.272382'
+    - '2016-03-14 04:40:39.272382'
+    - '11'
+    - |
+      <p>:</p>
+  - - '187'
+    - puppet-agent 1.4.z Add Ubuntu 16.04 Xenial (amd64, i386) to beaker-hostgenerator
+      (QENG-3489)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.290813'
+    - '2016-03-14 04:40:39.290813'
+    - '24'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '188'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.307657'
+    - '2016-03-14 04:40:39.307657'
+    - '11'
+    - |
+      <p>:</p>
+  - - '189'
+    - Ubuntu 16.04 Xenial Xerus
+    - 'Not scoped: To be ticketed'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.323263'
+    - '2016-03-14 04:40:39.323263'
+    - '24'
+    - |
+      <p>Not scoped: To be ticketed</p>
+  - - '190'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.340858'
+    - '2016-03-14 04:40:39.340858'
+    - '11'
+    - |
+      <p>:</p>
+  - - '191'
+    - Meep! PE Installation and Management Tools
+    - 'Not scoped: To be ticketed'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.356862'
+    - '2016-03-14 04:40:39.356862'
+    - '24'
+    - |
+      <p>Not scoped: To be ticketed</p>
+  - - '192'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.372266'
+    - '2016-03-14 04:40:39.372266'
+    - '11'
+    - |
+      <p>:</p>
+  - - '193'
+    - Spike on zLinux support (BKR-698)
+    - 'Developing: Sprint QE 2016-03-16'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:39.390942'
+    - '2016-03-14 04:40:39.390942'
+    - '24'
+    - |
+      <p>Developing: Sprint QE 2016-03-16</p>
+  - - '194'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.405365'
+    - '2016-03-14 04:40:39.405365'
+    - '11'
+    - |
+      <p>:</p>
+  - - '195'
+    - HA for Couch
+    - 'Not scoped: To be ticketed'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.415369'
+    - '2016-03-14 04:40:39.415369'
+    - '24'
+    - |
+      <p>Not scoped: To be ticketed</p>
+  - - '196'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.432147'
+    - '2016-03-14 04:40:39.432147'
+    - '11'
+    - |
+      <p>:</p>
+  - - '197'
+    - i18n testing
+    - 'Not scoped: Not yet scheduled'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.457788'
+    - '2016-03-14 04:40:39.457788'
+    - '20'
+    - |
+      <p>Not scoped: Not yet scheduled</p>
+  - - '198'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.473887'
+    - '2016-03-14 04:40:39.473887'
+    - '11'
+    - |
+      <p>:</p>
+  - - '199'
+    - puppet-agent 1.4.z Add cisco-wrlinux-7 platform to our nightly CI pipelines
+    - 'To Do: Not yet scheduled'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:39.4892'
+    - '2016-03-14 04:40:39.4892'
+    - '20'
+    - |
+      <p>To Do: Not yet scheduled</p>
+  - - '200'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.507799'
+    - '2016-03-14 04:40:39.507799'
+    - '11'
+    - |
+      <p>:</p>
+  - - '201'
+    - puppet-agent 1.4.z Add cisco-wrlinux-5 platform to our nightly CI pipelines
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:39.523873'
+    - '2016-03-14 04:40:39.523873'
+    - '20'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '202'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.540604'
+    - '2016-03-14 04:40:39.540604'
+    - '11'
+    - |
+      <p>:</p>
+  - - '203'
+    - puppet-agent 1.4.z Add support and CI pipeline for huaweios-6-powerpc
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.565968'
+    - '2016-03-14 04:40:39.565968'
+    - '20'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '204'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.582861'
+    - '2016-03-14 04:40:39.582861'
+    - '11'
+    - |
+      <p>:</p>
+  - - '205'
+    - puppet-agent 1.4.z Add support and CI pipeline for Ubuntu 16.04 Xenial (amd64,
+      i386)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.613679'
+    - '2016-03-14 04:40:39.613679'
+    - '20'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '206'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.622107'
+    - '2016-03-14 04:40:39.622107'
+    - '11'
+    - |
+      <p>:</p>
+  - - '207'
+    - perf/scale testing and initiative
+    - 'Ongoing: Burnside testing underway, long term initiative drafted'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:39.631359'
+    - '2016-03-14 04:40:39.631359'
+    - '20'
+    - |
+      <p>Ongoing: Burnside testing underway, long term initiative drafted</p>
+  - - '208'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.649447'
+    - '2016-03-14 04:40:39.649447'
+    - '11'
+    - |
+      <p>:</p>
+  - - '209'
+    - Test defined ssl checklist items
+    - 'Not scoped: Not yet scheduled'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.665315'
+    - '2016-03-14 04:40:39.665315'
+    - '20'
+    - |
+      <p>Not scoped: Not yet scheduled</p>
+  - - '210'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.682106'
+    - '2016-03-14 04:40:39.682106'
+    - '11'
+    - |
+      <p>:</p>
+  - - '211'
+    - SSL Audit
+    - 'Not started: Urgent; this item should exist for nearly all teams'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:39.699065'
+    - '2016-03-14 04:40:39.699065'
+    - '21'
+    - |
+      <p>Not started: Urgent; this item should exist for nearly all teams</p>
+  - - '212'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.715727'
+    - '2016-03-14 04:40:39.715727'
+    - '11'
+    - |
+      <p>:</p>
+  - - '213'
+    - i18n for PE services (NM, RBAC, etc) (PE-13489)
+    - 'developing: work started during burnside and will likely continue beyond Davis'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.732189'
+    - '2016-03-14 04:40:39.732189'
+    - '12'
+    - |
+      <p>developing: work started during burnside and will likely continue beyond Davis</p>
+  - - '214'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.749706'
+    - '2016-03-14 04:40:39.749706'
+    - '11'
+    - |
+      <p>:</p>
+  - - '215'
+    - Deleting Nodes in PE (PE-9378)
+    - 'defined, needs dev spike/research: this feels like it should be higher priority
+      but it currently isn''t'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.764237'
+    - '2016-03-14 04:40:39.764237'
+    - '12'
+    - |
+      <p>defined, needs dev spike/research: this feels like it should be higher priority but it currently isn't</p>
+  - - '216'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.782889'
+    - '2016-03-14 04:40:39.782889'
+    - '11'
+    - |
+      <p>:</p>
+  - - '217'
+    - Performance Monitoring/Testing of the Node Manager (PE-12740)
+    - 'developing: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.799562'
+    - '2016-03-14 04:40:39.799562'
+    - '12'
+    - |
+      <p>developing:</p>
+  - - '218'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.815159'
+    - '2016-03-14 04:40:39.815159'
+    - '11'
+    - |
+      <p>:</p>
+  - - '219'
+    - Versioning the NC & Integrating with Hiera
+    - 'UX designing: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.832809'
+    - '2016-03-14 04:40:39.832809'
+    - '12'
+    - |
+      <p>UX designing:</p>
+  - - '220'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.84891'
+    - '2016-03-14 04:40:39.84891'
+    - '11'
+    - |
+      <p>:</p>
+  - - '221'
+    - Accessibility in PE Console
+    - 'developing: ongoing support generally required to meet fed standards - no specific
+      delivery target '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.864143'
+    - '2016-03-14 04:40:39.864143'
+    - '12'
+    - |
+      <p>developing: ongoing support generally required to meet fed standards - no specific delivery target</p>
+  - - '222'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.88292'
+    - '2016-03-14 04:40:39.88292'
+    - '11'
+    - |
+      <p>:</p>
+  - - '223'
+    - i18n for the PE Console, RBAC, Activity Service (PE-11056, PE-11395, PE-11395)
+    - 'defining: currently planned to pick up during Davis but uncertain what target
+      will be as priorities shuffle'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.898001'
+    - '2016-03-14 04:40:39.898001'
+    - '13'
+    - |
+      <p>defining: currently planned to pick up during Davis but uncertain what target will be as priorities shuffle</p>
+  - - '224'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.916265'
+    - '2016-03-14 04:40:39.916265'
+    - '11'
+    - |
+      <p>:</p>
+  - - '225'
+    - Improved Support for Gitlab, Code Manager with Token Auth (PE-13933, PE-12961)
+    - 'defined, needs dev spike/research: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:39.932614'
+    - '2016-03-14 04:40:39.932614'
+    - '13'
+    - |
+      <p>defined, needs dev spike/research:</p>
+  - - '226'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.949426'
+    - '2016-03-14 04:40:39.949426'
+    - '11'
+    - |
+      <p>:</p>
+  - - '227'
+    - Improved Integration with Activity Service (PE-11318)
+    - 'developing: may pick up in couch timeline to meet demands of internal consumers'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:39.965796'
+    - '2016-03-14 04:40:39.965796'
+    - '13'
+    - |
+      <p>developing: may pick up in couch timeline to meet demands of internal consumers</p>
+  - - '228'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:39.981065'
+    - '2016-03-14 04:40:39.981065'
+    - '11'
+    - |
+      <p>:</p>
+  - - '229'
+    - 'Supported Module: Chocolatey (Modules-3036)'
+    - 'developing: Picking up this sprint '
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:39.999439'
+    - '2016-03-14 04:40:39.999439'
+    - '14'
+    - |
+      <p>developing: Picking up this sprint</p>
+  - - '230'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.015675'
+    - '2016-03-14 04:40:40.015675'
+    - '11'
+    - |
+      <p>:</p>
+  - - '231'
+    - 'Supported Module: IIS (FM-2800)'
+    - 'defined, needs dev spike/research: This has been requested by customers for
+      a while.  '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.032297'
+    - '2016-03-14 04:40:40.032297'
+    - '14'
+    - |
+      <p>defined, needs dev spike/research: This has been requested by customers for a while.</p>
+  - - '232'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.049601'
+    - '2016-03-14 04:40:40.049601'
+    - '11'
+    - |
+      <p>:</p>
+  - - '233'
+    - Windows Package Improvements (PUP-393)
+    - 'developing: ongoing work'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:40.064257'
+    - '2016-03-14 04:40:40.064257'
+    - '14'
+    - |
+      <p>developing: ongoing work</p>
+  - - '234'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.082945'
+    - '2016-03-14 04:40:40.082945'
+    - '11'
+    - |
+      <p>:</p>
+  - - '235'
+    - Move hiera.yaml
+    - 'defining: I''m recommending this for Couch. High CS impact, cross-team. Should
+      be very little code.'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.098976'
+    - '2016-03-14 04:40:40.098976'
+    - '22'
+    - |
+      <p>defining: I'm recommending this for Couch. High CS impact, cross-team. Should be very little code.</p>
+  - - '236'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.201303'
+    - '2016-03-14 04:40:40.201303'
+    - '11'
+    - |
+      <p>:</p>
+  - - '237'
+    - Facter Whitelists
+    - 'definining: Eric has started on definition. I suspect there''s value in as
+      little as 2 sprints of work, so guessing Davis.'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.229575'
+    - '2016-03-14 04:40:40.229575'
+    - '16'
+    - |
+      <p>definining: Eric has started on definition. I suspect there's value in as little as 2 sprints of work, so guessing Davis.</p>
+  - - '238'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.249686'
+    - '2016-03-14 04:40:40.249686'
+    - '11'
+    - |
+      <p>:</p>
+  - - '239'
+    - i18n
+    - 'Yet to start: If we don''t do this work during Couch, devs won''t be able to
+      get much i18n work done for features of Davis'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.26592'
+    - '2016-03-14 04:40:40.26592'
+    - '18'
+    - |
+      <p>Yet to start: If we don't do this work during Couch, devs won't be able to get much i18n work done for features of Davis</p>
+  - - '240'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.281507'
+    - '2016-03-14 04:40:40.281507'
+    - '11'
+    - |
+      <p>:</p>
+  - - '241'
+    - Platform Enablement - Debian 9
+    - 'Defined: Could happen during Couch or Davis'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.299465'
+    - '2016-03-14 04:40:40.299465'
+    - '18'
+    - |
+      <p>Defined: Could happen during Couch or Davis</p>
+  - - '242'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.332963'
+    - '2016-03-14 04:40:40.332963'
+    - '11'
+    - |
+      <p>:</p>
+  - - '243'
+    - Rebase GCC Toolchain
+    - 'Defining: Need GCC updated thus whole toolchain moved'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.349463'
+    - '2016-03-14 04:40:40.349463'
+    - '18'
+    - |
+      <p>Defining: Need GCC updated thus whole toolchain moved</p>
+  - - '244'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.372481'
+    - '2016-03-14 04:40:40.372481'
+    - '11'
+    - |
+      <p>:</p>
+  - - '245'
+    - Automated Education VM building/publishing
+    - 'Defining: This has been put off for at least 6 months'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.391119'
+    - '2016-03-14 04:40:40.391119'
+    - '18'
+    - |
+      <p>Defining: This has been put off for at least 6 months</p>
+  - - '246'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.408252'
+    - '2016-03-14 04:40:40.408252'
+    - '11'
+    - |
+      <p>:</p>
+  - - '247'
+    - Cloud Image building - Amazon
+    - 'Defining: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.423819'
+    - '2016-03-14 04:40:40.423819'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '248'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.466156'
+    - '2016-03-14 04:40:40.466156'
+    - '11'
+    - |
+      <p>:</p>
+  - - '249'
+    - Cloud Image building - Microsoft
+    - 'Defining: '
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.482417'
+    - '2016-03-14 04:40:40.482417'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '250'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.499207'
+    - '2016-03-14 04:40:40.499207'
+    - '11'
+    - |
+      <p>:</p>
+  - - '251'
+    - Vanagrant box updating/support
+    - 'Ongoing: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.515486'
+    - '2016-03-14 04:40:40.515486'
+    - '18'
+    - |
+      <p>Ongoing:</p>
+  - - '252'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.532054'
+    - '2016-03-14 04:40:40.532054'
+    - '11'
+    - |
+      <p>:</p>
+  - - '253'
+    - Metrics for supportability and performance tuning
+    - 'Defining: Est Effort: M'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:40.549622'
+    - '2016-03-14 04:40:40.549622'
+    - '19'
+    - |
+      <p>Defining: Est Effort: M</p>
+  - - '254'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.565691'
+    - '2016-03-14 04:40:40.565691'
+    - '11'
+    - |
+      <p>:</p>
+  - - '255'
+    - i18n Phase1
+    - 'Defining: This is a planned project for our intern, thus the Davis timing.
+      Est Effort: S'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.590518'
+    - '2016-03-14 04:40:40.590518'
+    - '19'
+    - |
+      <p>Defining: This is a planned project for our intern, thus the Davis timing. Est Effort: S</p>
+  - - '256'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.606567'
+    - '2016-03-14 04:40:40.606567'
+    - '11'
+    - |
+      <p>:</p>
+  - - '257'
+    - Puppet 5.0 Phase1
+    - 'Not started: Est Effort: M'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.62464'
+    - '2016-03-14 04:40:40.62464'
+    - '19'
+    - |
+      <p>Not started: Est Effort: M</p>
+  - - '258'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.640359'
+    - '2016-03-14 04:40:40.640359'
+    - '11'
+    - |
+      <p>:</p>
+  - - '259'
+    - PR Testing Pilot (QENG-3566)
+    - 'Not started: Pilot PR testing initiative targeting Modules and PuppetDB. Targetting
+      post-Burnside start date.'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.657824'
+    - '2016-03-14 04:40:40.657824'
+    - '24'
+    - |
+      <p>Not started: Pilot PR testing initiative targeting Modules and PuppetDB. Targetting post-Burnside start date.</p>
+  - - '260'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.674006'
+    - '2016-03-14 04:40:40.674006'
+    - '11'
+    - |
+      <p>:</p>
+  - - '261'
+    - Beaker.next
+    - |-
+      Not started: Picking up where Rick left off, defining phase to start in April.
+      Includes improved documentation, increased acceptance testing, deprication of various features/methods, test runner and provisioning considerations, reduced surface area.
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.689652'
+    - '2016-03-14 04:40:40.689652'
+    - '24'
+    - |
+      <p>Not started: Picking up where Rick left off, defining phase to start in April.
+      Includes improved documentation, increased acceptance testing, deprication of various features/methods, test runner and provisioning considerations, reduced surface area.</p>
+  - - '262'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.70799'
+    - '2016-03-14 04:40:40.70799'
+    - '11'
+    - |
+      <p>:</p>
+  - - '263'
+    - Puppet Agent Gorilla Insurgency - Upgrade Nexus (QENG-3515)
+    - 'Not started: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.723874'
+    - '2016-03-14 04:40:40.723874'
+    - '24'
+    - |
+      <p>Not started: Not yet scheduled</p>
+  - - '264'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.74116'
+    - '2016-03-14 04:40:40.74116'
+    - '11'
+    - |
+      <p>:</p>
+  - - '265'
+    - puppet-agent 1.4.z Add cisco-wrlinux-7 platform to our nightly CI pipelines
+      (QENG-3104)
+    - 'To Do: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.757862'
+    - '2016-03-14 04:40:40.757862'
+    - '24'
+    - |
+      <p>To Do: Not yet scheduled</p>
+  - - '266'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.781272'
+    - '2016-03-14 04:40:40.781272'
+    - '11'
+    - |
+      <p>:</p>
+  - - '267'
+    - puppet-agent 1.4.z Add cisco-wrlinux-5 platform to our nightly CI pipelines
+      (QENG-3291)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.799509'
+    - '2016-03-14 04:40:40.799509'
+    - '24'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '268'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.815675'
+    - '2016-03-14 04:40:40.815675'
+    - '11'
+    - |
+      <p>:</p>
+  - - '269'
+    - Update Daily CI Report (QENG-3568)
+    - 'Defining: Not yet scheduled'
+    - 
+    - '2'
+    - '2'
+    - 
+    - '2016-03-14 04:40:40.832077'
+    - '2016-03-14 04:40:40.832077'
+    - '24'
+    - |
+      <p>Defining: Not yet scheduled</p>
+  - - '270'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.849537'
+    - '2016-03-14 04:40:40.849537'
+    - '11'
+    - |
+      <p>:</p>
+  - - '271'
+    - Test workflows defined by UX and CS
+    - 'Not scoped: Not yet scheduled'
+    - 
+    - '2'
+    - '0'
+    - 
+    - '2016-03-14 04:40:40.864781'
+    - '2016-03-14 04:40:40.864781'
+    - '20'
+    - |
+      <p>Not scoped: Not yet scheduled</p>
+  - - '272'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.882095'
+    - '2016-03-14 04:40:40.882095'
+    - '11'
+    - |
+      <p>:</p>
+  - - '273'
+    - Rototiller (rake task builder)
+    - 'Ongoing: Tool to make testing more efficient'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.899487'
+    - '2016-03-14 04:40:40.899487'
+    - '20'
+    - |
+      <p>Ongoing: Tool to make testing more efficient</p>
+  - - '274'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.915641'
+    - '2016-03-14 04:40:40.915641'
+    - '11'
+    - |
+      <p>:</p>
+  - - '275'
+    - Scooter (beaker lib for testing)
+    - 'Ongoing: Tool to make testing more efficient'
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.932323'
+    - '2016-03-14 04:40:40.932323'
+    - '20'
+    - |
+      <p>Ongoing: Tool to make testing more efficient</p>
+  - - '276'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.949584'
+    - '2016-03-14 04:40:40.949584'
+    - '11'
+    - |
+      <p>:</p>
+  - - '277'
+    - PQL phase 1
+    - 'Delivering: '
+    - 
+    - '2'
+    - '3'
+    - 
+    - '2016-03-14 04:40:40.96425'
+    - '2016-03-14 04:40:40.96425'
+    - '21'
+    - |
+      <p>Delivering:</p>
+  - - '278'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:40.982907'
+    - '2016-03-14 04:40:40.982907'
+    - '11'
+    - |
+      <p>:</p>
+  - - '279'
+    - i18n
+    - 'Ongoing: '
+    - 
+    - '2'
+    - '1'
+    - 
+    - '2016-03-14 04:40:40.999464'
+    - '2016-03-14 04:40:40.999464'
+    - '21'
+    - |
+      <p>Ongoing:</p>
+  - - '280'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.015451'
+    - '2016-03-14 04:40:41.015451'
+    - '11'
+    - |
+      <p>:</p>
+  - - '281'
+    - Integration with Cloud Passage
+    - ': '
+    - 
+    - '2'
+    - 
+    - 
+    - '2016-03-14 04:40:41.032737'
+    - '2016-03-14 04:40:41.032737'
+    - '23'
+    - |
+      <p>:</p>
+  - - '282'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.047408'
+    - '2016-03-14 04:40:41.047408'
+    - '11'
+    - |
+      <p>:</p>
+  - - '283'
+    - Structured Facts for rule writing in the GUI (PE-6967)
+    - 'developing: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.066228'
+    - '2016-03-14 04:40:41.066228'
+    - '12'
+    - |
+      <p>developing:</p>
+  - - '284'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.082532'
+    - '2016-03-14 04:40:41.082532'
+    - '11'
+    - |
+      <p>:</p>
+  - - '285'
+    - Feature Flags for the PE Console (PE-13578)
+    - 'defined, needs dev spike/research: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.099272'
+    - '2016-03-14 04:40:41.099272'
+    - '13'
+    - |
+      <p>defined, needs dev spike/research:</p>
+  - - '286'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.116282'
+    - '2016-03-14 04:40:41.116282'
+    - '11'
+    - |
+      <p>:</p>
+  - - '287'
+    - SQL Server Next (FM-2101)
+    - 'defining: Info request by clients'
+    - 
+    - '1'
+    - '1'
+    - 
+    - '2016-03-14 04:40:41.132135'
+    - '2016-03-14 04:40:41.132135'
+    - '14'
+    - |
+      <p>defining: Info request by clients</p>
+  - - '288'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.149566'
+    - '2016-03-14 04:40:41.149566'
+    - '11'
+    - |
+      <p>:</p>
+  - - '289'
+    - Bye bye hiera
+    - 'defining: Groundwork laid with Data in Modules. Should be coordinated with
+      node management roadmap for classification.'
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.165871'
+    - '2016-03-14 04:40:41.165871'
+    - '22'
+    - |
+      <p>defining: Groundwork laid with Data in Modules. Should be coordinated with node management roadmap for classification.</p>
+  - - '290'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.181343'
+    - '2016-03-14 04:40:41.181343'
+    - '11'
+    - |
+      <p>:</p>
+  - - '291'
+    - Native Agent
+    - 'defining: Long runway. We got as far as native facter and stopped.'
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.199474'
+    - '2016-03-14 04:40:41.199474'
+    - '16'
+    - |
+      <p>defining: Long runway. We got as far as native facter and stopped.</p>
+  - - '292'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.216119'
+    - '2016-03-14 04:40:41.216119'
+    - '11'
+    - |
+      <p>:</p>
+  - - '293'
+    - Platform Enablement - Retire Squeeze
+    - 'Defined: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.232405'
+    - '2016-03-14 04:40:41.232405'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '294'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.249675'
+    - '2016-03-14 04:40:41.249675'
+    - '11'
+    - |
+      <p>:</p>
+  - - '295'
+    - Platform Enablement - Retire Vivid
+    - 'Defined: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.264072'
+    - '2016-03-14 04:40:41.264072'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '296'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.272931'
+    - '2016-03-14 04:40:41.272931'
+    - '11'
+    - |
+      <p>:</p>
+  - - '297'
+    - Platform Enablement - Retire Lucid
+    - 'Defined: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.2913'
+    - '2016-03-14 04:40:41.2913'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '298'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.307563'
+    - '2016-03-14 04:40:41.307563'
+    - '11'
+    - |
+      <p>:</p>
+  - - '299'
+    - Platform Enablement - Retire Fedora 21
+    - 'Defined: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.324165'
+    - '2016-03-14 04:40:41.324165'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '300'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.341037'
+    - '2016-03-14 04:40:41.341037'
+    - '11'
+    - |
+      <p>:</p>
+  - - '301'
+    - Build archives.puppetlabs.com
+    - 'Defining: Many FOSS users asking for this'
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.35785'
+    - '2016-03-14 04:40:41.35785'
+    - '18'
+    - |
+      <p>Defining: Many FOSS users asking for this</p>
+  - - '302'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.372714'
+    - '2016-03-14 04:40:41.372714'
+    - '11'
+    - |
+      <p>:</p>
+  - - '303'
+    - Direct Puppet Catalog Metadata
+    - 'Not started: '
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.391178'
+    - '2016-03-14 04:40:41.391178'
+    - '19'
+    - |
+      <p>Not started:</p>
+  - - '304'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.40791'
+    - '2016-03-14 04:40:41.40791'
+    - '11'
+    - |
+      <p>:</p>
+  - - '305'
+    - Windows CI testing pipeline for token-auth client (QENG-2864)
+    - 'Blocked: Not yet scheduled'
+    - 
+    - '1'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.422206'
+    - '2016-03-14 04:40:41.422206'
+    - '24'
+    - |
+      <p>Blocked: Not yet scheduled</p>
+  - - '306'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.432685'
+    - '2016-03-14 04:40:41.432685'
+    - '11'
+    - |
+      <p>:</p>
+  - - '307'
+    - CLI phase 2
+    - 'Not started: '
+    - 
+    - '1'
+    - '1'
+    - 
+    - '2016-03-14 04:40:41.449481'
+    - '2016-03-14 04:40:41.449481'
+    - '21'
+    - |
+      <p>Not started:</p>
+  - - '308'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.465028'
+    - '2016-03-14 04:40:41.465028'
+    - '11'
+    - |
+      <p>:</p>
+  - - '309'
+    - AOT compilation
+    - 'Not started: '
+    - 
+    - '1'
+    - '1'
+    - 
+    - '2016-03-14 04:40:41.482149'
+    - '2016-03-14 04:40:41.482149'
+    - '21'
+    - |
+      <p>Not started:</p>
+  - - '310'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.499753'
+    - '2016-03-14 04:40:41.499753'
+    - '11'
+    - |
+      <p>:</p>
+  - - '311'
+    - Provisioning in the PE Console (PE-10744)
+    - 'UX designing: '
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.515744'
+    - '2016-03-14 04:40:41.515744'
+    - '12'
+    - |
+      <p>UX designing:</p>
+  - - '312'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.53253'
+    - '2016-03-14 04:40:41.53253'
+    - '11'
+    - |
+      <p>:</p>
+  - - '313'
+    - PC2
+    - 'Defining: Some talk of Puppet5 during Couch'
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.549892'
+    - '2016-03-14 04:40:41.549892'
+    - '18'
+    - |
+      <p>Defining: Some talk of Puppet5 during Couch</p>
+  - - '314'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.564272'
+    - '2016-03-14 04:40:41.564272'
+    - '11'
+    - |
+      <p>:</p>
+  - - '315'
+    - Retire old infrastructure
+    - 'Defined: We have old systems involved in builds that can''t get updates any
+      more'
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.608097'
+    - '2016-03-14 04:40:41.608097'
+    - '18'
+    - |
+      <p>Defined: We have old systems involved in builds that can't get updates any more</p>
+  - - '316'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.624602'
+    - '2016-03-14 04:40:41.624602'
+    - '11'
+    - |
+      <p>:</p>
+  - - '317'
+    - Refactor Ezbake to use vmpooler
+    - 'Defining: This could retire a subset of infrastructure and process'
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.641169'
+    - '2016-03-14 04:40:41.641169'
+    - '18'
+    - |
+      <p>Defining: This could retire a subset of infrastructure and process</p>
+  - - '318'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.657859'
+    - '2016-03-14 04:40:41.657859'
+    - '11'
+    - |
+      <p>:</p>
+  - - '319'
+    - Refactor enterprise-dist to use vanagon
+    - 'Defining: This could retire a subset of infrastructure and process'
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.672613'
+    - '2016-03-14 04:40:41.672613'
+    - '18'
+    - |
+      <p>Defining: This could retire a subset of infrastructure and process</p>
+  - - '320'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.691343'
+    - '2016-03-14 04:40:41.691343'
+    - '11'
+    - |
+      <p>:</p>
+  - - '321'
+    - Allow community to build puppet-agent
+    - 'Defining: '
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.707407'
+    - '2016-03-14 04:40:41.707407'
+    - '18'
+    - |
+      <p>Defining:</p>
+  - - '322'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.724119'
+    - '2016-03-14 04:40:41.724119'
+    - '11'
+    - |
+      <p>:</p>
+  - - '323'
+    - Platform enablement - ARM
+    - 'Defined: '
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.741328'
+    - '2016-03-14 04:40:41.741328'
+    - '18'
+    - |
+      <p>Defined:</p>
+  - - '324'
+    - 
+    - ': '
+    - 
+    - 
+    - 
+    - 
+    - '2016-03-14 04:40:41.755758'
+    - '2016-03-14 04:40:41.755758'
+    - '11'
+    - |
+      <p>:</p>
+  - - '325'
+    - i18n Later Phases
+    - 'Not started: Est Effort: XL'
+    - 
+    - '0'
+    - '0'
+    - 
+    - '2016-03-14 04:40:41.77461'
+    - '2016-03-14 04:40:41.77461'
+    - '19'
+    - |
+      <p>Not started: Est Effort: XL</p>
+  - - '326'
+    - Implement controller for web page
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '3'
+    - '2016-03-14 15:37:15.250317'
+    - '2016-03-14 15:39:08.004922'
+    - '7'
+    - |2+
+
+  - - '327'
+    - Update JIRA tickets
+    - ''
+    - 
+    - '1'
+    - '1'
+    - '1'
+    - '2016-03-14 15:37:32.519402'
+    - '2016-03-14 15:38:45.714492'
+    - '7'
+    - |2+
+
+  - - '328'
+    - Pair program on new database adapter
+    - ''
+    - 
+    - '1'
+    - '2'
+    - '1'
+    - '2016-03-14 15:37:52.91947'
+    - '2016-03-14 15:38:33.107632'
+    - '7'
+    - |2+
+
+  - - '329'
+    - Complete check-in document for manager
+    - ''
+    - 
+    - '2'
+    - '1'
+    - '2'
+    - '2016-03-14 15:38:11.079514'
+    - '2016-03-14 15:38:18.535453'
+    - '7'
+    - |2+
+
+  - - '330'
+    - Cthun
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '0'
+    - '2016-03-15 22:11:19.746135'
+    - '2016-03-15 22:21:17.281548'
+    - '25'
+    - |2+
+
+  - - '331'
+    - Forge (On-Premise)
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '0'
+    - '2016-03-15 22:11:35.860472'
+    - '2016-03-15 22:17:10.987192'
+    - '25'
+    - |2+
+
+  - - '332'
+    - Pegasus
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '0'
+    - '2016-03-15 22:11:40.554606'
+    - '2016-03-15 22:20:51.092743'
+    - '25'
+    - |2+
+
+  - - '333'
+    - GUI Scale
+    - ''
+    - 
+    - '3'
+    - '1'
+    - '2'
+    - '2016-03-15 22:11:45.931185'
+    - '2016-03-15 22:17:41.063737'
+    - '25'
+    - |2+
+
+  - - '334'
+    - Diff n' Drift
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '2'
+    - '2016-03-15 22:11:50.965642'
+    - '2016-03-15 22:16:17.805645'
+    - '25'
+    - |2+
+
+  - - '335'
+    - 'Workstream: Code Management'
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '3'
+    - '2016-03-15 22:11:58.156893'
+    - '2016-03-15 22:20:03.635554'
+    - '25'
+    - |2+
+
+  - - '336'
+    - Team Nodes
+    - ''
+    - 
+    - '3'
+    - '1'
+    - '3'
+    - '2016-03-15 22:12:02.004898'
+    - '2016-03-15 22:19:18.834935'
+    - '25'
+    - |2+
+
+  - - '337'
+    - Telemetry
+    - ''
+    - 
+    - '3'
+    - '0'
+    - '2'
+    - '2016-03-15 22:12:05.509768'
+    - '2016-03-15 22:20:36.511704'
+    - '25'
+    - |2+
+
+  - - '338'
+    - Messaging Enhancements
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '1'
+    - '2016-03-15 22:12:16.610702'
+    - '2016-03-15 22:18:19.811017'
+    - '25'
+    - |2+
+
+  - - '339'
+    - Puppet Install/Configure
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '3'
+    - '2016-03-15 22:12:23.216789'
+    - '2016-03-15 22:18:50.327286'
+    - '25'
+    - |2+
+
+  - - '340'
+    - PQL
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '3'
+    - '2016-03-15 22:12:28.028504'
+    - '2016-03-15 22:18:41.126038'
+    - '25'
+    - |2+
+
+  - - '341'
+    - Visual Documentation
+    - ''
+    - 
+    - '3'
+    - '2'
+    - '2'
+    - '2016-03-15 22:12:33.798206'
+    - '2016-03-15 22:19:34.307891'
+    - '25'
+    - |2+
+
+  - - '342'
+    - PuppetServer
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '3'
+    - '2016-03-15 22:12:41.096412'
+    - '2016-03-15 22:19:09.40566'
+    - '25'
+    - |2+
+
+  - - '343'
+    - 'Workstream: Application Orchestration'
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '3'
+    - '2016-03-15 22:12:51.813387'
+    - '2016-03-15 22:19:42.000692'
+    - '25'
+    - |2+
+
+  - - '344'
+    - 'Workstream: Configuration Management'
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '3'
+    - '2016-03-15 22:13:03.042382'
+    - '2016-03-15 22:20:11.111296'
+    - '25'
+    - |2+
+
+  - - '345'
+    - 'Workstream: Hafjell'
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '3'
+    - '2016-03-15 22:13:16.313954'
+    - '2016-03-15 22:20:18.718266'
+    - '25'
+    - |2+
+
+  - - '346'
+    - 'Workstream: Node Management'
+    - ''
+    - 
+    - '3'
+    - '3'
+    - '3'
+    - '2016-03-15 22:13:25.687045'
+    - '2016-03-15 22:20:25.219163'
+    - '25'
+    - |2+
+
+  - - '347'
+    - 'Workstream: Windows'
+    - ''
+    - 
+    - '1'
+    - '0'
+    - '1'
+    - '2016-03-15 22:13:32.342589'
+    - '2016-03-15 22:20:31.904965'
+    - '25'
+    - |2+
+
+  - - '348'
+    - Localization of Product
+    - ''
+    - 
+    - '1'
+    - '1'
+    - '0'
+    - '2016-03-15 22:13:38.167331'
+    - '2016-03-15 22:21:28.155265'
+    - '25'
+    - |2+
+
+  - - '349'
+    - PuppetDB
+    - ''
+    - 
+    - '1'
+    - '0'
+    - '1'
+    - '2016-03-15 22:13:50.637857'
+    - '2016-03-15 22:20:39.213712'
+    - '25'
+    - |2+
+
+  - - '350'
+    - Data Management
+    - ''
+    - 
+    - '2'
+    - '2'
+    - '2'
+    - '2016-03-15 22:14:11.306836'
+    - '2016-03-15 22:15:53.544993'
+    - '25'
+    - |2+
+
+  - - '351'
+    - Puppet Language
+    - ''
+    - 
+    - '2'
+    - '0'
+    - '3'
+    - '2016-03-15 22:14:20.661782'
+    - '2016-03-15 22:20:42.569362'
+    - '25'
+    - |2+
+
+  - - '352'
+    - Evaluation of shipped product
+    - ''
+    - 
+    - '2'
+    - '1'
+    - '2'
+    - '2016-03-15 22:14:27.760378'
+    - '2016-03-15 22:16:38.995268'
+    - '25'
+    - |2+
+
+  - - '353'
+    - Confluence IA
+    - ''
+    - 
+    - '2'
+    - '1'
+    - '3'
+    - '2016-03-15 22:14:32.205171'
+    - '2016-03-15 22:15:41.063347'
+    - '25'
+    - |2+
+
+  - - '354'
+    - Design Library
+    - ''
+    - 
+    - '2'
+    - '1'
+    - '3'
+    - '2016-03-15 22:14:36.811708'
+    - '2016-03-15 22:16:07.519443'
+    - '25'
+    - |2+
+
+  - - '355'
+    - Forge (Website)
+    - ''
+    - 
+    - '2'
+    - '1'
+    - '2'
+    - '2016-03-15 22:14:42.651906'
+    - '2016-03-15 22:17:24.435159'
+    - '25'
+    - |2+
+
+  - - '356'
+    - PE Core
+    - ''
+    - 
+    - '2'
+    - '2'
+    - '2'
+    - '2016-03-15 22:14:47.043769'
+    - '2016-03-15 22:18:29.155531'
+    - '25'
+    - |2+
+
+  - - '357'
+    - Facter
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '1'
+    - '2016-03-15 22:14:50.355572'
+    - '2016-03-15 22:21:21.882531'
+    - '25'
+    - |2+
+
+  - - '358'
+    - Geppetto
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '3'
+    - '2016-03-15 22:14:55.316316'
+    - '2016-03-15 22:21:26.045107'
+    - '25'
+    - |2+
+
+  - - '359'
+    - Marionette Collective
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '0'
+    - '2016-03-15 22:15:01.358518'
+    - '2016-03-15 22:21:06.289164'
+    - '25'
+    - |2+
+
+  - - '360'
+    - Partner Initiatives
+    - ''
+    - 
+    - '0'
+    - '0'
+    - '0'
+    - '2016-03-15 22:15:07.860172'
+    - '2016-03-15 22:20:57.759471'
+    - '25'
+    - |2+
+
+
+---
+lists:
+  columns:
+  - id
+  - name
+  - user_id
+  - description
+  - rendered_description
+  - public
+  - created_at
+  - updated_at
+  records: 
+  - - '2'
+    - Work
+    - '1'
+    - ''
+    - |2+
+
+    - false
+    - '2016-03-07 06:04:14.640028'
+    - '2016-03-07 06:04:14.640028'
+  - - '3'
+    - AJ's team priorities
+    - '2'
+    - A prioritized list of priorities
+    - |
+      <p>A prioritized list of priorities</p>
+    - false
+    - '2016-03-07 15:36:01.611832'
+    - '2016-03-07 15:36:01.611832'
+  - - '5'
+    - Engineering Priorities
+    - '3'
+    - A list of eng priorities
+    - |
+      <p>A list of eng priorities</p>
+    - false
+    - '2016-03-07 18:28:06.936847'
+    - '2016-03-07 18:28:06.936847'
+  - - '7'
+    - My Todo List
+    - '5'
+    - My work snippets and team initiatives
+    - |
+      <p>My work snippets and team initiatives</p>
+    - false
+    - '2016-03-10 21:03:11.277187'
+    - '2016-03-14 15:36:44.436219'
+  - - '9'
+    - BizOps
+    - '7'
+    - Dept List
+    - |
+      <p>Dept List</p>
+    - false
+    - '2016-03-10 21:25:34.293758'
+    - '2016-03-10 21:25:34.293758'
+  - - '10'
+    - Integration
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.349643'
+    - '2016-03-14 04:40:36.42701'
+  - - '12'
+    - Node Management
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.561594'
+    - '2016-03-14 04:40:36.568384'
+  - - '13'
+    - PE Core
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.63704'
+    - '2016-03-14 04:40:36.643765'
+  - - '14'
+    - Windows
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.677761'
+    - '2016-03-14 04:40:36.684989'
+  - - '15'
+    - PCP
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.720512'
+    - '2016-03-14 04:40:36.726974'
+  - - '16'
+    - Client
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.76194'
+    - '2016-03-14 04:40:36.768297'
+  - - '17'
+    - UI Toolkit
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.803623'
+    - '2016-03-14 04:40:36.810371'
+  - - '18'
+    - Release Engineering
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.845183'
+    - '2016-03-14 04:40:36.852026'
+  - - '19'
+    - Puppet Server
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:36.919284'
+    - '2016-03-14 04:40:36.927057'
+  - - '20'
+    - QA
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:37.086134'
+    - '2016-03-14 04:40:37.093742'
+  - - '21'
+    - PDB
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:37.128282'
+    - '2016-03-14 04:40:37.135435'
+  - - '22'
+    - Language
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:37.286282'
+    - '2016-03-14 04:40:37.293499'
+  - - '23'
+    - Configuration Management
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:37.528902'
+    - '2016-03-14 04:40:37.53509'
+  - - '24'
+    - QE
+    - '3'
+    - 
+    - 
+    - false
+    - '2016-03-14 04:40:38.870851'
+    - '2016-03-14 04:40:38.877303'
+  - - '25'
+    - UX
+    - '3'
+    - "A list of UX priorities\r\n"
+    - |
+      <p>A list of UX priorities</p>
+    - false
+    - '2016-03-15 22:10:57.077079'
+    - '2016-03-15 22:10:57.077079'
+
+---
+lists_users:
+  columns:
+  - list_id
+  - user_id
+  records: 
+  - - '2'
+    - '3'
+  - - '5'
+    - '1'
+  - - '5'
+    - '5'
+  - - '5'
+    - '7'
+  - - '7'
+    - '1'

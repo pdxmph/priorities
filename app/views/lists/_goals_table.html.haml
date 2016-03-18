@@ -1,12 +1,12 @@
-%table.table.sortable
+%table.table{:id => "sortable", :style => "table-layout:auto;", "data-sort-name" => "order"}
   %thead
     %tr
-      %th Health
-      %th Goal
-      %th Priority
-      %th Support
-      %th Effort
-      %th Cost
+      %th{"data-sortable" => true, "data-field" => "health" }Health
+      %th{"data-sortable" => true, "data-field" => "name"}Goal
+      %th{"data-sortable" => true, "data-field" => "priority"} Priority
+      %th{"data-sortable" => true, "data-field" => "support"} Support
+      %th{"data-sortable" => true, "data-field" => "effort"} Effort
+      %th{"data-sortable" => true, "data-field" => "cost"} Cost
       - if can? :manage, @list
         %th Manage
   %tbody{:id => "goals_table_body"}

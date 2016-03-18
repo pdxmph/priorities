@@ -1,5 +1,10 @@
 class Goal < ActiveRecord::Base
-
+  include RankedModel
+  ranks :row_order
+  belongs_to :list
+  ranks :row_order,
+        :with_same => :list_id
+  
   belongs_to :team
   belongs_to :list
 

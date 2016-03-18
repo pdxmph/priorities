@@ -10,14 +10,17 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require jquery-ui
- *= require bootstrap-sortable
- *= require font-awesome
+
 */
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jquery-ui";
+@import "bootstrap-sortable";
+@import "font-awesome";
+@import "jquery-ui/sortable";
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;

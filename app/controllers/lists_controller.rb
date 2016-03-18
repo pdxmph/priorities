@@ -18,9 +18,11 @@ class ListsController < ApplicationController
   # GET /lists/1.json
   def show
     @title = @list.name
-    @goals = @list.goals
+    @goals = @list.goals.rank(:row_order).all
   end
 
+
+  
   # GET /lists/new
   def new
     @list = List.new

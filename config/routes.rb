@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  
   get '/lists' => 'application#index'
   get '/lists/admin' => 'lists#admin'
   get '/goals' => 'application#index'
@@ -13,7 +14,9 @@ Rails.application.routes.draw do
   post 'goals/set_goal_work' => 'goals#set_goal_work'
   root 'application#index'
   resources :lists
-  resources :goals
+  resources :goals do
+    post :update_row_order, on: :collection
+  end
   resources :users, only: [:show, :edit, :update]
 
 end
