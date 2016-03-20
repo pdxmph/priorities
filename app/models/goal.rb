@@ -17,6 +17,12 @@ class Goal < ActiveRecord::Base
   scope :all_except, ->(goal) { where.not(id: goal) }
 
   markdownize! :description
+
+
+  def goal_rank
+    goal_list = self.list.goals.rank(:row_order).all
+    return goal_list.index(self)+1
+  end
   
   def self.health(health, list)
     goals = list.goals.select { |g| g.health == health}

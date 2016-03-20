@@ -1,26 +1,26 @@
 - goal.health == 0 ? row_data = "unknown" : row_data = "known"
 
-%tr.item{:id => "goal_row_#{goal.id}", "data-value" => row_data, "data-item-id" => goal.id, "data-order" => goal.row_order}
+%tr.item{:id => "goal_row_#{goal.id}", "data-value" => row_data, "data-item-id" => goal.id, "data-order" => goal.row_order, "data-sort-rank" => goal.row_order}
     
-  %td{:id => "goal_health_#{goal.id}", "data-health" => goal.health }
+  %td{:id => "goal_health_#{goal.id}", "data-sort-value" => goal.health }
     = health_indicator(goal)
   
-  %td{"data-name" => goal.name, :id => "goal_name_#{goal.id}"}
+  %td{"data-name" => goal.name, :id => "goal_name_#{goal.id}", "data-sort-value" => goal.name}
     = link_to goal.name, goal
 
-  %td{"data-priority" => goal.priority, :id => "td_priority_#{goal.id}"}
+  %td{"data-priority" => goal.priority, :id => "td_priority_#{goal.id}", "data-sort-value" => goal.priority}
     %div{:id => "priority-button-#{goal.id}"}
       = render :partial => "goals/priority_button", :locals => {:goal => goal, :list => @list}
            
-  %td{"data-support" => goal.support, :id => "td_goal_support_#{goal.id}"}
+  %td{"data-support" => goal.support, :id => "td_goal_support_#{goal.id}", "data-sort-value" => goal.support}
     %div{:id => "support_button-#{goal.id}"}
       = render :partial => "goals/support_button", :locals => {:goal => goal, :list => @list}
 
-  %td{"data-effort" => goal.effort, :id => "td_goal_effort_#{goal.id}"}
+  %td{"data-effort" => goal.effort, :id => "td_goal_effort_#{goal.id}", "data-sort-value" => goal.effort}
     %div{:id => "effort_button-#{goal.id}"}
       = render :partial => "goals/effort_button", :locals => {:goal => goal, :list => @list}
     
-  %td{"data-cost" => goal.burden, :id => "td_goal_burden_#{goal.id}"}
+  %td{"data-cost" => goal.burden, :id => "td_goal_burden_#{goal.id}", "data-sort-value" => goal.burden}
     = render :partial => "goals/burden_field", :locals => {:goal => goal}
   
   - if can? :manage, @list
@@ -32,3 +32,7 @@
         %span.glyphicon.glyphicon-remove
 
 
+:javascript
+  $("#sortable").stupidtable();
+
+  

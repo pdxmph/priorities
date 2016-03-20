@@ -1,2 +1,3 @@
 - goals.each do |goal|
-  = render :partial => "goals/index_row", :locals => {:goal => goal}
+  = render :partial => "goals/index_row.html", :locals => {:goal => goal, :goals_rank => goals.index(goal) }
+

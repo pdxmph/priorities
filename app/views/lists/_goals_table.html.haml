@@ -1,17 +1,23 @@
 %table.table{:id => "sortable", :style => "table-layout:auto;", "data-sort-name" => "order"}
   %thead
     %tr
-      %th.col-sm-1{"data-sortable" => true, "data-field" => "health" }Health
-      %th.col-sm-4{"data-sortable" => true, "data-field" => "name"}Goal
-      %th{"data-sortable" => true, "data-field" => "priority"} Priority
-      %th{"data-sortable" => true, "data-field" => "support"} Support
-      %th{"data-sortable" => true, "data-field" => "effort"} Effort
-      %th{"data-sortable" => true, "data-field" => "cost"} Cost
+      %th.col-sm-1{"data-sort" => "int"}
+        Health
+      %th.col-sm-4{"data-sort" => "string"}
+        Goal
+      %th{"data-sort" => "int"}
+        Priority
+      %th{"data-sort" => "int"}
+        Support
+      %th{"data-sort" => "int"}
+        Effort
+      %th{"data-sort" => "int"}
+        Cost
       - if can? :manage, @list
         %th Manage
   %tbody{:id => "goals_table_body"}
     - goals.each do |goal|
-      = render :partial => "goals/index_row", :locals => {:goal => goal}
+      = render :partial => "goals/index_row", :locals => {:goal => goal, :goal_rank => goals.index(goal)+1}
 
 - if can? :manage, @list
   %a.btn.btn-success.btn-sm{:id => 'add_goals_toggle', 'data-toggle' => 'modal', 'data-target' => "#goalModal"}
