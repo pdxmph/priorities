@@ -9,6 +9,8 @@
     = f.label :description, :class => 'col-sm-2 control-label'
     .col-sm-4
       = f.text_area :description, :class => 'form-control', :style => "height:125px;"
+      .help-block
+        Markdown is okay here. 
     = error_span(@list[:description])
     = f.hidden_field :user_id, :value => current_user.id
 
@@ -16,9 +18,18 @@
     = f.label "Share with ...", :class => 'col-sm-2 control-label'
     .col-sm-4
       = f.collection_select :user_ids, User.all_except(current_user), :id, :full_name, {}, {:multiple => true, :class => 'form-control', 'style' => 'height:250px;'} 
-    
+      .help-block
+        Select which registered users may view this list. 
+      
+  .form-group
+    = f.label "Make this list public?", :class => 'col-sm-2 control-label'
+    .col-sm-4.checkbox
+      = f.check_box :public
+      .help-block
+        Selecting this will allow anyone to see this list if they have the URL,
+        even if they're not a registered user. 
     
   .actions.col-sm-offset-2
     .col-sm-4
-      = f.submit "Create", :class => 'btn btn-primary'
+      = f.submit "Save", :class => 'btn btn-primary'
       = link_to t('.cancel', :default => t("helpers.links.cancel")), lists_path, :class => 'btn btn-default'

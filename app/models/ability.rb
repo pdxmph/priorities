@@ -6,7 +6,7 @@ class Ability
     user ||= User.new
     can :manage, List, :user_id => user.id
     can :read, List do |list|
-      list.user_ids.include?(user.id)
+      list.user_ids.include?(user.id) or list.public == true
     end
 
     can :manage, Goal do |goal|

@@ -12,17 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui/sortable
+//= require jquery-ui/effect-highlight
 //= require jquery.turbolinks
-//= require_tree .
 //= require bootstrap-sprockets
 //= require autocomplete-rails
 //= require jquery.md5
 //= require outerHTML-2.1.0
 //= require md5
-//= require jquery-ui
 //= require bootstrap-sortable
 //= require moment
 //= require jquery.filtertable.min.js
 //= require turbolinks
+//= require_tree .
 
 
