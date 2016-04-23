@@ -3,7 +3,10 @@
     = link_to "Home", root_path
   %li.active
     = @list.name
-
+  - if can? :manage, @list
+    %li.inactive
+      = link_to "Edit", edit_list_path
+    
 %div{:id => "goals_area"}
   - if cannot? :read, @list
     = render :partial => 'no_authorization.html.haml'
