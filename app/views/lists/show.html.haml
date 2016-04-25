@@ -13,7 +13,7 @@
   - elsif @list.goals.count < 1 and can? :manage, @list
     = render :partial => 'no_goals.html.haml'
   - else
-    = render :partial => 'goals_table.html.haml', :locals => {:goals => @list.goals}
+    = render :partial => 'goals_table.html.haml', :locals => {:goals => @list.goals, :context => "display_list"}
     
   
 %div.modal.fade{:id => "goalModal", :role => "dialog", 'data-backdrop' => 'false'}

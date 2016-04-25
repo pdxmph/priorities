@@ -1,6 +1,8 @@
 %table.table.sortable
   %thead
     %tr
+      - if context && context == "all_goals"
+        %th List
       %th Health
       %th Goal
       %th Priority
@@ -11,7 +13,7 @@
         %th Manage
   %tbody{:id => "goals_table_body"}
     - goals.each do |goal|
-      = render :partial => "goals/index_row", :locals => {:goal => goal}
+      = render :partial => "goals/index_row", :locals => {:goal => goal, :context => context}
 
 - if can? :manage, @list
   %a.btn.btn-success.btn-sm{:id => 'add_goals_toggle', 'data-toggle' => 'modal', 'data-target' => "#goalModal"}

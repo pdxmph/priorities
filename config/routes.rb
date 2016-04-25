@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/lists' => 'application#index'
   get '/lists/admin' => 'lists#admin'
   get '/goals' => 'application#index'
+  get '/goals/all_goals' => 'goals#all_goals'
   get '/docs' => 'application#docs'
   get '/users/' => 'users#index'
   match '/users/:id', :to => 'users#show', :as => :user,  :via => :get

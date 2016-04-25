@@ -2,6 +2,10 @@ class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
 
 
+  def all_goals
+    @user = current_user ||= User.new
+  end
+
   def set_goal_priority
     @priority = params[:priority]
     @goal = Goal.find(params[:goal])

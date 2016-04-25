@@ -1,7 +1,11 @@
 - goal.health == 0 ? row_data = "unknown" : row_data = "known"
 
 %tr{:id => "goal_row_#{goal.id}", "data-value" => row_data }
-    
+
+  - if context && context == "all_goals"
+    %td{:id => "goal_list_#{goal.id}", "data-value" => goal.list.name}
+      = link_to goal.list.name, goal.list
+  
   %td{:id => "goal_health_#{goal.id}", "data-value" => goal.health }
     = health_indicator(goal)
   
