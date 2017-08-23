@@ -1,7 +1,7 @@
 %table.table.sortable
   %thead
     %tr
-      - if context && context == "all_goals"
+      - if defined?(context) && context == "all_goals"
         %th List
       %th Health
       %th Goal
