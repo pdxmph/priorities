@@ -50,7 +50,7 @@ gem 'pg'
 gem 'habtm_generator', :group => :development
 gem 'haml'
 gem 'haml-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '>= 3.2.0', '< 3.2.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'devise', '4.1'
