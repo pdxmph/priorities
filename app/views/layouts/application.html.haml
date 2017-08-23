@@ -47,9 +47,6 @@
                       %li
                         = link_to list.name, list
                     %li{:role => "presentation", :class => "divider"}
-                      %li
-                        = link_to "All Your Goals", '/goals/all_goals'
-                    %li{:role => "presentation", :class => "divider"}
                     %li
                       = link_to "Create New List", new_list_path
                     - if current_user.try(:admin?)
