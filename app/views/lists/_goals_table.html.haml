@@ -13,7 +13,7 @@
         %th Manage
   %tbody{:id => "goals_table_body"}
     - goals.each do |goal|
-      = render :partial => "goals/index_row", :locals => {:goal => goal, :context => context}
+      = render :partial => "goals/index_row", :locals => {:goal => goal} #, :context => context}
 
 - if can? :manage, @list
   %a.btn.btn-success.btn-sm{:id => 'add_goals_toggle', 'data-toggle' => 'modal', 'data-target' => "#goalModal"}
