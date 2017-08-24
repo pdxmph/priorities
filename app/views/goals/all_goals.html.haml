@@ -8,7 +8,7 @@
   - if user_signed_in? == false
     = render :partial => 'no_user.html.haml'
   - else
-    = render :partial => 'lists/goals_table.html.haml', :locals => {:goals => current_user.goals, :context => "all_goals"}
+    = render :partial => 'lists/goals_table.html.haml', :locals => {:goals => current_user.goals}
     
   
 
