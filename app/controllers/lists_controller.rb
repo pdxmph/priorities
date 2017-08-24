@@ -77,7 +77,7 @@ class ListsController < ApplicationController
     end
 
     def require_admin
-      unless current_user.try(:admin?) or @list.user_ids.include?(user.id)
+      unless current_user.try(:admin?) or @list.user_ids.include?(current_user.id)
         flash[:error] = "You must be an admin to access that page."
         redirect_to "/" 
       end
