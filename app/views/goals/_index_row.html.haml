@@ -2,7 +2,7 @@
 
 %tr{:id => "goal_row_#{goal.id}", "data-value" => row_data }
 
-  - if defined?(context) && context == "all_goals"
+  - if params[:action] == "all_goals"
     %td{:id => "goal_list_#{goal.id}", "data-value" => goal.list.name}
       = link_to goal.list.name, goal.list
   
