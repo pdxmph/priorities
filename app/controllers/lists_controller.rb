@@ -50,7 +50,12 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1.json
   def update
     respond_to do |format|
-      if @list.update(list_params)
+      if current_user.try(:admin?)
+        params_to_update = list_params_for_admins
+      else
+        params_to_update = list_params
+      end
+      if @list.update(params_to_update) 
         format.html { redirect_to @list, notice: 'List was successfully updated.' }
         format.json { render :show, status: :ok, location: @list }
       else
@@ -87,4 +92,9 @@ class ListsController < ApplicationController
     def list_params
       params.require(:list).permit(:name, :user_id, :description, :rendered_description, :public, :user_ids => [])
     end
+
+    def list_params_for_admins
+      params.require(:list).permit(:name, :description, :rendered_description, :public)
+    end
+
 end
