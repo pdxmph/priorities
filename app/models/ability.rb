@@ -16,7 +16,7 @@ class Ability
     can :manage, :all if user.admin == true
 
     can :manage, List do |list|
-      list.user_ids.include(user.id) or user.admin == true
+      list.user_ids.include?(user.id) or user.admin == true
     end
     
   end
