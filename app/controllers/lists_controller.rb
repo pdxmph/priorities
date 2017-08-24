@@ -94,7 +94,7 @@ class ListsController < ApplicationController
     end
 
     def list_params_for_admins
-      params.require(:list).permit(:name, :description, :rendered_description, :public)
+      params.require(:list).permit(:name, :description, :rendered_description, :public, :user_ids => [])
     end
 
 end
