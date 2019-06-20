@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +43,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+
+  gem 'sqlite3', '~> 1.3.6'
+
+
 end
 
 
@@ -50,10 +55,10 @@ gem 'pg'
 gem 'habtm_generator', :group => :development
 gem 'haml'
 gem 'haml-rails'
-gem 'twitter-bootstrap-rails', '>= 3.2.0', '< 3.2.2'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass'
 
-gem 'devise', '4.1'
+gem 'devise'
 gem 'jquery-ui-rails'
 gem 'simple_form'
 gem 'markdownizer'
@@ -71,5 +76,6 @@ gem 'rails4-autocomplete'
 gem 'jquery-turbolinks'
 gem 'cancancan'
 gem 'ranked-model'
-gem 'json', '~> 1.5'
+gem 'json'
 gem 'rails_12factor'
+
