@@ -53,7 +53,7 @@ gem 'haml-rails'
 gem 'twitter-bootstrap-rails', '>= 3.2.0', '< 3.2.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 
-gem 'devise', '4.1'
+gem 'devise', '4.7.1'
 gem 'jquery-ui-rails'
 gem 'simple_form'
 gem 'markdownizer'
