@@ -14,7 +14,7 @@ your team is actually doing.
 
 You can read more about this process and my thinking around it here:
 
-<http://mph.puddingbowl.org/2016/02/thinking-about-priorities/>
+<https://mike.puddingtime.org/management/2022/05/04/thinking-about-priorities>
 
 `priorities` is a pared-down version of my
 [Docs Decomposer][decomposer], which has the same tool, only hardcoded
