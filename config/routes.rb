@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   post 'goals/set_goal_support' => 'goals#set_goal_support'
   post 'goals/set_goal_work' => 'goals#set_goal_work'
   root 'application#index'
-  resources :lists
+  resources :lists do
+    member do
+      get :analysis
+    end
+  end
   resources :goals
   resources :users, only: [:show, :edit, :update]
 

@@ -19,6 +19,13 @@ class ListsController < ApplicationController
   def show
     @title = @list.name
     @goals = @list.goals
+    @analysis = PriorityAnalysisService.new(@list).alignment_report
+  end
+
+  # GET /lists/1/analysis
+  def analysis
+    @analysis = PriorityAnalysisService.new(@list).alignment_report
+    render json: @analysis
   end
 
   # GET /lists/new

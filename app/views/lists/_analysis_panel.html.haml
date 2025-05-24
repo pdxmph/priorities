@@ -1,0 +1,52 @@
+%div.analysis-panel
+  %h4 Priority Alignment Analysis
+  
+  %div.metrics-summary
+    %div.row
+      %div.col-md-3
+        %div.metric-card.text-center
+          %h3.text-primary= @analysis[:metrics][:total_goals]
+          %p Total Goals
+      
+      %div.col-md-3
+        %div.metric-card.text-center
+          %h3.text-success= "#{@analysis[:metrics][:alignment_percentage]}%"
+          %p Well-Aligned
+      
+      %div.col-md-3
+        %div.metric-card.text-center
+          %h3.text-danger= "#{@analysis[:metrics][:critical_percentage]}%"
+          %p Under-Resourced
+      
+      %div.col-md-3
+        %div.metric-card.text-center
+          %h3.text-info= @analysis[:metrics][:average_gap]
+          %p Avg Gap
+
+  - if @analysis[:recommendations].any?
+    %div.recommendations.mt-4
+      %h5 💡 Recommendations
+      %ul.list-unstyled
+        - @analysis[:recommendations].each do |rec|
+          %li.mb-2
+            %span.badge.badge-warning= rec
+
+  %div.goal-breakdown.mt-4
+    %div.row
+      - if @analysis[:critical_gaps].any?
+        %div.col-md-6
+          %h6.text-danger 🚨 Critical Gaps (#{@analysis[:critical_gaps].count})
+          %ul.list-unstyled
+            - @analysis[:critical_gaps].each do |goal|
+              %li
+                %strong= goal.name
+                %small.text-muted= " (P#{goal.priority} → E#{goal.effort})"
+      
+      - if @analysis[:needs_attention].any?
+        %div.col-md-6
+          %h6.text-warning ⚠️ Needs Attention (#{@analysis[:needs_attention].count})
+          %ul.list-unstyled
+            - @analysis[:needs_attention].each do |goal|
+              %li
+                %strong= goal.name
+                %small.text-muted= " (P#{goal.priority} → E#{goal.effort})"
