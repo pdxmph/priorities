@@ -43,7 +43,7 @@ module ListsHelper
       content_tag(:span, "Needs attention", class: "label label-warning")
     when 0
       content_tag(:span, "Well-aligned", class: "label label-success")
-    when -1..-3
+    when -3..-1
       content_tag(:span, "Over-invested", class: "label label-info")
     end
   end

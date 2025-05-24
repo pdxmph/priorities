@@ -27,7 +27,7 @@ class Goal < ActiveRecord::Base
     when 2..3 then 3     # Critical: High priority, very low effort
     when 1 then 2        # Warning: Some misalignment  
     when 0 then 1        # Good: Effort matches priority
-    when -1..-3 then 1   # Good: Over-investing (not necessarily bad)
+    when -3..-1 then 1   # Good: Over-investing (not necessarily bad)
     end
   end
 
@@ -87,7 +87,7 @@ class Goal < ActiveRecord::Base
       "⚡ Needs attention (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
     when 0
       "✅ Well-aligned (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
-    when -1..-3
+    when -3..-1
       "📈 Over-invested (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
     end
   end
