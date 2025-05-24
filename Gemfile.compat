@@ -1,0 +1,41 @@
+source 'https://rubygems.org'
+
+ruby '3.4.4'
+
+# Keep Rails 4.2 but with compatible versions for Ruby 3.4
+gem 'rails', '4.2.11.3'  # Last Rails 4.2 release
+
+# Use compatible database and web server  
+gem 'pg', '~> 1.0'
+gem 'puma', '~> 4.3'
+
+# Replace broken gems with compatible versions
+gem 'sassc-rails', '~> 2.1'  # Instead of sass-rails
+gem 'coffee-rails', '~> 4.2'
+gem 'uglifier', '>= 1.3.0'
+
+# Keep the rest minimal for testing
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+
+# Authentication and UI (with compatible versions)
+gem 'devise', '~> 4.9'  
+gem 'bootstrap', '~> 5.0'
+gem 'haml-rails'
+gem 'simple_form'
+
+# Utility gems (compatible versions)
+gem 'friendly_id', '~> 5.4'
+gem 'cancancan'
+gem 'redcarpet'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'minitest', '~> 5.0'
+end
+
+group :development do
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end

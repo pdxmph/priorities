@@ -50,29 +50,41 @@ class Goal < ActiveRecord::Base
     support + effort
   end
 
+  # Display helpers that show the intuitive P1/P2/P3 scale
+  def priority_display
+    case priority
+    when 0 then "Unset"
+    when 1 then "P3 (Low)"
+    when 2 then "P2 (Medium)" 
+    when 3 then "P1 (High)"
+    end
+  end
+
+  def effort_display
+    case effort
+    when 0 then "None"
+    when 1 then "Low"
+    when 2 then "Medium"
+    when 3 then "High"
+    end
+  end
+
+  # Legacy method for backward compatibility
   def priority_narrative
     case priority
-    when 0
-      "Undetermined"
-    when 1
-      "Low"
-    when 2
-      "Medium"
-    when 3
-      "High"
+    when 0 then "Undetermined"
+    when 1 then "Low"
+    when 2 then "Medium"
+    when 3 then "High"
     end
   end
 
   def effort_narrative
     case effort
-    when 0
-      "None"
-    when 1
-      "Low"
-    when 2
-      "Medium"
-    when 3
-      "High"
+    when 0 then "None"
+    when 1 then "Low"
+    when 2 then "Medium"
+    when 3 then "High"
     end
   end
 
@@ -82,13 +94,13 @@ class Goal < ActiveRecord::Base
     
     case gap
     when 2..3
-      "⚠️ Under-resourced (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
+      "⚠️ Under-resourced (#{priority_display}, #{effort_display} effort)"
     when 1
-      "⚡ Needs attention (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
+      "⚡ Needs attention (#{priority_display}, #{effort_display} effort)"
     when 0
-      "✅ Well-aligned (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
+      "✅ Well-aligned (#{priority_display}, #{effort_display} effort)"
     when -3..-1
-      "📈 Over-invested (Priority: #{priority_narrative}, Effort: #{effort_narrative})"
+      "📈 Over-invested (#{priority_display}, #{effort_display} effort)"
     end
   end
 

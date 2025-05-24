@@ -1,5 +1,36 @@
 module ListsHelper
 
+  def priority_select_options
+    [
+      ['P1 (High Priority)', 3],
+      ['P2 (Medium Priority)', 2], 
+      ['P3 (Low Priority)', 1],
+      ['Unset', 0]
+    ]
+  end
+
+  def effort_select_options
+    [
+      ['High Effort', 3],
+      ['Medium Effort', 2],
+      ['Low Effort', 1], 
+      ['No Effort', 0]
+    ]
+  end
+
+  def priority_badge(goal)
+    case goal.priority
+    when 3
+      content_tag(:span, "P1", class: "label label-danger", title: "High Priority")
+    when 2
+      content_tag(:span, "P2", class: "label label-warning", title: "Medium Priority")
+    when 1
+      content_tag(:span, "P3", class: "label label-info", title: "Low Priority")
+    else
+      content_tag(:span, "?", class: "label label-default", title: "Unset Priority")
+    end
+  end
+
   def status_board(list)
     well_aligned = Goal.health(1, list)
     needs_attention = Goal.health(2, list)

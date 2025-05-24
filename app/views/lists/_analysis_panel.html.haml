@@ -40,7 +40,7 @@
             - @analysis[:critical_gaps].each do |goal|
               %li
                 %strong= goal.name
-                %small.text-muted= " (P#{goal.priority} → E#{goal.effort})"
+                %small.text-muted= " (#{goal.priority_display} → #{goal.effort_display})"
       
       - if @analysis[:needs_attention].any?
         %div.col-md-6
@@ -49,4 +49,4 @@
             - @analysis[:needs_attention].each do |goal|
               %li
                 %strong= goal.name
-                %small.text-muted= " (P#{goal.priority} → E#{goal.effort})"
+                %small.text-muted= " (#{goal.priority_display} → #{goal.effort_display})"

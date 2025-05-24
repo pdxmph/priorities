@@ -29,25 +29,45 @@ class Goal
     end
   end
 
+  def priority_display
+    case priority
+    when 0 then "Unset"
+    when 1 then "P3 (Low)"
+    when 2 then "P2 (Medium)" 
+    when 3 then "P1 (High)"
+    end
+  end
+
+  def effort_display
+    case effort
+    when 0 then "None"
+    when 1 then "Low"
+    when 2 then "Medium"
+    when 3 then "High"
+    end
+  end
+
   def alignment_narrative
     gap = priority_effort_gap
     return "Unknown" if gap.nil?
     
     case gap
     when 2..3
-      "⚠️ Under-resourced (Priority: #{priority}, Effort: #{effort})"
+      "⚠️ Under-resourced (#{priority_display}, #{effort_display} effort)"
     when 1
-      "⚡ Needs attention (Priority: #{priority}, Effort: #{effort})"
+      "⚡ Needs attention (#{priority_display}, #{effort_display} effort)"
     when 0
-      "✅ Well-aligned (Priority: #{priority}, Effort: #{effort})"
+      "✅ Well-aligned (#{priority_display}, #{effort_display} effort)"
     when -3..-1
-      "📈 Over-invested (Priority: #{priority}, Effort: #{effort})"
+      "📈 Over-invested (#{priority_display}, #{effort_display} effort)"
     end
   end
 end
 
 # Demo the improved logic
-puts "🎯 Priority Alignment Demo\n\n"
+puts "🎯 Priority Alignment Demo"
+puts "📝 Note: Internally we use 3=High, 1=Low for math to work"
+puts "📱 But display shows intuitive P1=High, P3=Low to users\n\n"
 
 goals = [
   Goal.new(name: "Launch new feature", priority: 3, effort: 1),
@@ -59,8 +79,9 @@ goals = [
 
 goals.each do |goal|
   puts "#{goal.name}:"
+  puts "  Internal: Priority #{goal.priority}, Effort #{goal.effort}"
+  puts "  Display: #{goal.priority_display}, #{goal.effort_display} effort"
   puts "  Gap: #{goal.priority_effort_gap || 'N/A'}"
-  puts "  Risk Level: #{goal.alignment_risk}"
   puts "  Status: #{goal.alignment_narrative}"
   puts
 end
